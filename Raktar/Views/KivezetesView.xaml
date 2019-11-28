@@ -1,0 +1,95 @@
+﻿<Window x:Class="Raktar.Views.KivezetesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raktar.Views"
+        mc:Ignorable="d"
+                WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Title="Kivezetés" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Border Padding="0" Margin="0" Background="White" BorderBrush="#2868b0" BorderThickness="4" CornerRadius="4">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+            <GroupBox>
+                <StackPanel>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,10,0">Név:</TextBlock>
+                        <TextBlock FontWeight="Bold" MinWidth="100" Text="{Binding Dolgozo.Name}" Margin="0,0,10,0"></TextBlock>
+                        <TextBlock Margin="0,0,10,0">Osztály:</TextBlock>
+                        <TextBlock FontWeight="Bold" MinWidth="100" Text="{Binding Dolgozo.GroupName}" Margin="0,0,10,0"></TextBlock>
+                    </StackPanel>
+                    <StackPanel  VerticalAlignment="Center" Grid.Row="0" Margin="5,0,5,0" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center" Margin="5,0,5,0">Cikk kiválasztása</TextBlock>
+                            <ComboBox SelectedItem="{Binding Munkaruha}" x:Name="Cikkek" Margin="5" DisplayMemberPath="NameForCikk" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="150" Height="25"></ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,5"  VerticalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Cikkszáma:</TextBlock>
+                            <TextBox IsReadOnly="True"  Style="{StaticResource DesignedTextBox}" Text="{Binding Munkaruha.Cikkszam}" FontWeight="Bold" x:Name="Number" Width="65" Margin="5,0,5,0" VerticalAlignment="Center"></TextBox>
+                            <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Megnevezés:</TextBlock>
+                            <TextBox IsReadOnly="True" Style="{StaticResource DesignedTextBox}" Text="{Binding Munkaruha.Cikknev}" FontWeight="Bold" x:Name="CikkName"  Width="90" Margin="5,0,5,0" VerticalAlignment="Center"></TextBox>
+                            <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Mennyiség</TextBlock>
+                            <TextBox Style="{StaticResource DesignedTextBox}" x:Name="Count" BorderBrush="Black" BorderThickness="1" Width="50" Margin="5,0,5,0" HorizontalContentAlignment="Center" VerticalAlignment="Center">
+                            </TextBox>
+                            <TextBlock  Margin="5,0,5,0">Személynél:</TextBlock>
+                            <TextBox IsReadOnly="True" Style="{StaticResource DesignedTextBox}" Text="{Binding Munkaruha.Mennyiseg}" FontWeight="Bold" Margin="5,0,5,0" x:Name="Max"  VerticalAlignment="Center" Width="30" ></TextBox>
+                            <TextBlock   Width="80" Margin="5,0,5,0" >
+                    Mértékegység:</TextBlock>
+
+                            <TextBox IsReadOnly="True"  Style="{StaticResource DesignedTextBox}" Text="{Binding Munkaruha.Mertekegyseg}" FontWeight="Bold" x:Name="Unit" Width="50" Margin="5,0,5,0" VerticalAlignment="Center">
+                            </TextBox>
+
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Width="50" Margin="5,0,5,0" VerticalAlignment="Center"> Egységár
+                            </TextBlock>
+
+                            <TextBox IsReadOnly="True" Style="{StaticResource DesignedTextBox}" Text="{Binding Munkaruha.Egysegar, StringFormat='c0', ConverterCulture=hu-HU}" FontWeight="Bold" x:Name="Price" MinWidth="50" Margin="5,0,5,0" VerticalAlignment="Center" >
+                            </TextBox>
+
+                            <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Partner:</TextBlock>
+                            <TextBox IsReadOnly="True" Style="{StaticResource DesignedTextBox}" Text="{Binding Munkaruha.Partner}" FontWeight="Bold" x:Name="Partner" VerticalAlignment="Center" Margin="5,0,5,0" Width="100" >
+                            </TextBox>
+                            <Button x:Name="AddCikkToGrid" Margin="5" Height="45" >Cikk hozzáadása</Button>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+
+        </StackPanel>
+        <ScrollViewer Margin="5" Grid.Row="1">
+            <DataGrid x:Name="Ruhak"  Cursor="Hand"   AutoGenerateColumns="False" IsReadOnly="True"  AlternationCount="1" SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="Cikkszám" Binding="{Binding Path=Cikkszam}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Cikknév" Binding="{Binding Path=Cikknev}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="auto" Header="Mennyiség" Binding="{Binding Path=Mennyiseg}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="auto" Header="Mértékegység" Binding="{Binding Path=Mertekegyseg}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Egységár" Binding="{Binding Egysegar, StringFormat={}{0:C0}, ConverterCulture= hu-HU }"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Összesen" Binding="{Binding Osszesen, StringFormat={}{0:C0}, ConverterCulture= hu-HU }"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Partner" Binding="{Binding Path=Partner}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+        <StackPanel Margin="5" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="Save" Width="100" Height="45" Margin="0,0,60,0">
+                Mentés
+            </Button>
+            <Button x:Name="CloseWindow" Width="100" Height="45">
+                Kilépés
+            </Button>
+        </StackPanel>
+    </Grid>
+  </Border>
+</Window>

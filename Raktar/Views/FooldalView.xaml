@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="Raktar.Views.FooldalView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Raktar.Views"
+             mc:Ignorable="d" 
+             FontSize="22"
+             FontFamily="Roboto"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#f1f3f4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+    <StackPanel HorizontalAlignment="Center">
+        <TextBlock Margin="0,5,0,0" FontSize="40" FontWeight="Bold" Foreground="#2868b0">Ótemplomi Szeretetszolgálat</TextBlock>
+        <TextBlock FontSize="30" Foreground="#2868b0" HorizontalAlignment="Center">Munkaruha nyilvántartó program</TextBlock>
+    </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <!--Dolgozó-->
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="1"  >
+                <Button Background="#f1f3f4" VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="Dolgozo" Style="{StaticResource MainWindowButton}" ToolTip="Dolgozó hozzáadása"   >
+                    <Grid Background="#f1f3f4" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="/Raktar;component/Pictrures/MainPageIcons/followers.png"/>
+                        <TextBlock TextAlignment="Center" TextWrapping="Wrap"  Margin="5"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"  Foreground="#2868b0">Dolgozó hozzáadása</TextBlock>
+                    </Grid>
+                </Button>
+
+            </Grid>
+
+            <!--Osztály-->
+            <Grid Grid.Column="2" Grid.Row="1">
+                <Button Background="#f1f3f4" Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="Osztaly" ToolTip="Osztály hozzáadása"  >
+                    <Grid Background="#f1f3f4" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="/Raktar;component/Pictrures/MainPageIcons/viral.png"/>
+                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"  Foreground="#2868b0">Osztály hozzáadása</TextBlock>
+                    </Grid>
+                </Button>
+
+            </Grid>
+
+            <!--Cikk-->
+            <Grid  Grid.Column="3" Grid.Row="1" >
+                <Button Background="#f1f3f4" Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" x:Name="Cikk" ToolTip="Cikk hozzáadása" >
+                    <Grid Background="#f1f3f4" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="/Raktar;component/Pictrures/MainPageIcons/stock.png"/>
+                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"  Foreground="#2868b0">Cikkek hozzáadása</TextBlock>
+                    </Grid>
+                </Button>
+            </Grid>
+          
+            <!--CikkCsoport--><!--
+            <Button VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="#f1f3f4" x:Name="Csoport" Style="{StaticResource MainWindowButton}" ToolTip="Cikkcsoport hozzáadása"  Grid.Column="4" Grid.Row="1" >
+                <Grid Background="#f1f3f4" MinHeight="250"  HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Raktar;component/Pictrures/MainPageIcons/personal-care.png"/>
+                    <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"  Foreground="#2868b0">Cikkcsoport hozzáadása</TextBlock>
+                </Grid>-->
+          
+            <!--Partner-->
+            <Grid Grid.Column="4" Grid.Row="1">
+                <Button Background="#f1f3f4" x:Name="Partner" Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTip="Partner hozzáadása"   >
+
+                    <Grid Background="#f1f3f4" MinHeight="250"  HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="/Raktar;component/Pictrures/MainPageIcons/add-to-cart.png"/>
+                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"  Foreground="#2868b0">Partner hozzáadása</TextBlock>
+                    </Grid>
+                </Button>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</UserControl>

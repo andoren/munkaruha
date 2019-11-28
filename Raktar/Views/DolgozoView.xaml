@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Raktar.Views.DolgozoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Raktar.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#f1f3f4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <StackPanel Margin="0,5,5,5" Orientation="Horizontal">
+                <Button x:Name="KivalasztDolgozo" VerticalAlignment="Center" HorizontalAlignment="Left"   >Dolgozó kiválasztása</Button>
+                <TextBlock VerticalAlignment="Center"  Margin="5,5,0,5">Kiválasztott dolgozó:</TextBlock>
+                <TextBlock  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="WorkerName" Margin="5,0,0,0"> </TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5,0,0,0">-</TextBlock>
+                <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="WorkerGroup" Margin="5,0,0,0"></TextBlock>
+            </StackPanel>
+            <StackPanel IsEnabled="{Binding DolgozoKivalasztva}"  Orientation="Horizontal">
+                <Button x:Name="Visszavet"  Margin="0,0,10,5" >Visszavétel</Button>
+                <Button x:Name="Kivezetes"  Margin="0,0,10,5">Kivezetés</Button>
+                <Button x:Name="Nyomtatas"  Margin="0,0,10,5">Nyomtatási kép</Button>
+            </StackPanel>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" >
+            <DataGrid x:Name="Ruhak" Grid.Row="2" Grid.RowSpan="2" FontSize="16" IsReadOnly="True" Cursor="Hand" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Cikkszam}" Width="*" Header="Cikkszám" ></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Cikknev}" Width="*" Header="Cikknév"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Cikkcsoport}" Width="*" Header="Cikkcsoport"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Mennyiseg}" Width="*" Header="Mennyiség"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Mertekegyseg}" Width="*" Header="Mértékegység"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Egysegar, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Egységár"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Osszesen, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Összesen"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Partner}" Width="*" Header="Partner"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Bevdatum}" Width="*" Header="Kiadás"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </ScrollViewer>
+        <StackPanel  Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <TextBlock> Összsen:</TextBlock>
+            <TextBlock x:Name="Sum" FontWeight="Bold" Text="{Binding Sum, StringFormat='c0', ConverterCulture=hu-HU}" Margin="10,0,20,0">0 Ft</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

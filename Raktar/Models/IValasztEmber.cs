@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Raktar.Models
+{
+    interface IValasztEmber
+    {
+        void KivalasztDolgozo();
+        Dolgozo Dolgozo { get; set; }
+    }
+}

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23F7C22B-82BA-40CE-B1F6-D8DFB2DE6F8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Raktar</RootNamespace>
+    <AssemblyName>Raktar</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Munkaruha</ProductName>
+    <PublisherName>Pekár Mihály</PublisherName>
+    <SuiteName>Ótemplomi Szeretetszolgálat</SuiteName>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>apron.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>63ED97DFCF3497252C705E7D7B8862658DBBDFE6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Raktar_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.16\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Bevetel.cs" />
+    <Compile Include="Models\Csoport.cs" />
+    <Compile Include="Models\Database\Abstract\DatabaseHelper.cs" />
+    <Compile Include="Models\Database\DolgozoDatabaseHelper.cs" />
+    <Compile Include="Models\Database\MunkaruhaDatabaseHelper.cs" />
+    <Compile Include="Models\Database\PartnerHelper.cs" />
+    <Compile Include="Models\Dolgozo.cs" />
+    <Compile Include="Models\FlowDocumentCreator.cs" />
+    <Compile Include="Models\InvalidIndexExceptionForScene.cs" />
+    <Compile Include="Models\ISetCikk.cs" />
+    <Compile Include="Models\IValasztEmber.cs" />
+    <Compile Include="Models\Logger.cs" />
+    <Compile Include="Models\Munkaruha.cs" />
+    <Compile Include="Models\Osztaly.cs" />
+    <Compile Include="Models\PrintLayout.cs" />
+    <Compile Include="Models\SceneFactory.cs" />
+    <Compile Include="RaktarBootstrapper.cs" />
+    <Compile Include="ViewModels\AddAndModifyCikkViewModel.cs" />
+    <Compile Include="ViewModels\AddAndModifyCsoportViewModel.cs" />
+    <Compile Include="ViewModels\AddAndModifyDolgozoViewModel.cs" />
+    <Compile Include="ViewModels\AddAndModifyOsztalyViewModel.cs" />
+    <Compile Include="ViewModels\AddAndModifyPartnerViewModel.cs" />
+    <Compile Include="ViewModels\BevetelezesekViewModel.cs" />
+    <Compile Include="ViewModels\BevWindowViewModel.cs" />
+    <Compile Include="ViewModels\CikkekViewModel.cs" />
+    <Compile Include="ViewModels\DolgozoKivalasztViewModel.cs" />
+    <Compile Include="ViewModels\DolgozoViewModel.cs" />
+    <Compile Include="ViewModels\FooldalViewModel.cs" />
+    <Compile Include="Models\Partner.cs" />
+    <Compile Include="ViewModels\KiadWindowViewModel.cs" />
+    <Compile Include="ViewModels\KivezetesViewModel.cs" />
+    <Compile Include="ViewModels\ListakViewModel.cs" />
+    <Compile Include="ViewModels\PopUpViewModel.cs" />
+    <Compile Include="ViewModels\PrintingWindowViewModel.cs" />
+    <Compile Include="ViewModels\RaktarViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\TorzsViewModel.cs" />
+    <Compile Include="ViewModels\VisszavetViewModel.cs" />
+    <Compile Include="Views\AddAndModifyCikkView.xaml.cs">
+      <DependentUpon>AddAndModifyCikkView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAndModifyCsoportView.xaml.cs">
+      <DependentUpon>AddAndModifyCsoportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAndModifyDolgozoView.xaml.cs">
+      <DependentUpon>AddAndModifyDolgozoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAndModifyOsztalyView.xaml.cs">
+      <DependentUpon>AddAndModifyOsztalyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAndModifyPartnerView.xaml.cs">
+      <DependentUpon>AddAndModifyPartnerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BevetelezesekView.xaml.cs">
+      <DependentUpon>BevetelezesekView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BevWindowView.xaml.cs">
+      <DependentUpon>BevWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CikkekView.xaml.cs">
+      <DependentUpon>CikkekView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DolgozoKivalasztView.xaml.cs">
+      <DependentUpon>DolgozoKivalasztView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DolgozoView.xaml.cs">
+      <DependentUpon>DolgozoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FooldalView.xaml.cs">
+      <DependentUpon>FooldalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KiadWindowView.xaml.cs">
+      <DependentUpon>KiadWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KivezetesView.xaml.cs">
+      <DependentUpon>KivezetesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListakView.xaml.cs">
+      <DependentUpon>ListakView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopUpView.xaml.cs">
+      <DependentUpon>PopUpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintingWindowView.xaml.cs">
+      <DependentUpon>PrintingWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaktarView.xaml.cs">
+      <DependentUpon>RaktarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TorzsView.xaml.cs">
+      <DependentUpon>TorzsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VisszavetView.xaml.cs">
+      <DependentUpon>VisszavetView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Raktar_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\exit-xxl.png" />
+    <Resource Include="Pictrures\home-4-xxl.png" />
+    <Resource Include="Pictrures\polish-cloth-xxl.png" />
+    <Resource Include="Pictrures\store-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\text-file-4-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\user-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\fejlec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\AddAndModifyCikkView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddAndModifyCsoportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddAndModifyDolgozoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddAndModifyOsztalyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddAndModifyPartnerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BevetelezesekView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BevWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CikkekView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DolgozoKivalasztView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DolgozoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FooldalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KiadWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KivezetesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListakView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopUpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PrintingWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RaktarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TorzsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VisszavetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\MainPageIcons\stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\MainPageIcons\followers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\MainPageIcons\add-to-cart.png" />
+    <Resource Include="Pictrures\MainPageIcons\personal-care.png" />
+    <Resource Include="Pictrures\MainPageIcons\viral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apron.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictrures\clos.png" />
+    <Resource Include="Pictrures\maximize.png" />
+    <Resource Include="Pictrures\minimize.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
