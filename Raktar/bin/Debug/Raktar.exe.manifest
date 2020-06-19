@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Raktar.exe" size="657360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Raktar.exe" size="656848">
       <assemblyIdentity name="Raktar" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>q9DAjqIPqUHV6F8btJgqUqVFnLspKR9Zny2SYg5HP3c=</dsig:DigestValue>
+        <dsig:DigestValue>dyhsMPZ5/Y6ZBqle6/PssXv/7tMbx0DYIkYmaJvuFG4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -165,13 +165,13 @@
       <dsig:DigestValue>LKdFSjiG5/X7UzR9M9AumUG/VzdxIMenf+GgauhHdNU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Raktar.exe.config" size="1257">
+  <file name="Raktar.exe.config" size="1255">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>BkvIAfmw0xpmwxC/R+/mcRqvs9X9KzrjMnw3/ruNmXc=</dsig:DigestValue>
+      <dsig:DigestValue>nwyYwRlvMZTs8d5vbYSRvXRFWiPBMm1Na5YxXQKjVSY=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

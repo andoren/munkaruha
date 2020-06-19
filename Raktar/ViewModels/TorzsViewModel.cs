@@ -72,7 +72,6 @@ namespace Raktar.ViewModels
             if (string.IsNullOrEmpty(Search) || Search == "Keresés..." )
             {
                 SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
-                Search = "Keresés...";
                 return;
             }
             if (keyArgs != null)
@@ -187,7 +186,7 @@ namespace Raktar.ViewModels
             if (string.IsNullOrEmpty(SearchPartner) || SearchPartner == "Keresés...")
             {
                 SearchablePartners = new BindableCollection<Partner>(Partnerek);
-                SearchPartner = "Keresés...";
+              
                 return;
             }
             if (keyArgs != null)
@@ -303,7 +302,7 @@ namespace Raktar.ViewModels
             if (string.IsNullOrEmpty(SearchCikk) || SearchCikk == "Keresés...")
             {
                 SearchableRuha = new BindableCollection<Munkaruha>(Cikkek);
-                SearchCikk = "Keresés...";
+               
                 return;
             }
             if (keyArgs != null)
@@ -423,7 +422,7 @@ namespace Raktar.ViewModels
             if (string.IsNullOrEmpty(SearchGroup) || SearchGroup == "Keresés...")
             {
                 SearchableCsoportok = new BindableCollection<Osztaly>(Csoportok);
-                SearchGroup = "Keresés...";
+                
                 return;
             }
             if (keyArgs != null)
@@ -479,33 +478,28 @@ namespace Raktar.ViewModels
             DolgozoDatabaseHelper dolgozohelper = new DolgozoDatabaseHelper();
             Dolgozok = dolgozohelper.GetDolgozok();
             SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
-
             PartnerHelper partnerhelper = new PartnerHelper();
             Partnerek = partnerhelper.GetPartners();
             SearchablePartners = new BindableCollection<Partner>(Partnerek);
-
             MunkaruhaDatabaseHelper cikkhelper = new MunkaruhaDatabaseHelper();
             Cikkek = cikkhelper.GetAllCikkek();
             SearchableRuha = new BindableCollection<Munkaruha>(Cikkek);
-
             Csoportok = dolgozohelper.GetOsztalyok();
             SearchableCsoportok = new BindableCollection<Osztaly>(Csoportok);
 
         }
 
 
-        public void FocusLost() {
+        public void LostFocus() {
+            SearchCikk = "Keresés...";
             Search = "Keresés...";
+            SearchPartner = "Keresés...";
+            SearchGroup = "Keresés...";
             SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
-            MessageBox.Show("Lost focus");
+            SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
+            SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
+            SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
 
         }
-
-
-
-
-
-
-
     }
 }
