@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\MentettRepos\source\repos\Raktar\Raktar\obj\Debug\
+E:\Repos\Munkaruha\Raktar\obj\Debug\
 Raktar
 none
 false
 DEBUG;TRACE
-E:\MentettRepos\source\repos\Raktar\Raktar\App.xaml
-20-313015879
+E:\Repos\Munkaruha\Raktar\App.xaml
+221219258172
+2-1740635784
+662035216115
+83-370572647
+Views\AddAndModifyCikkView.xaml;Views\AddAndModifyCsoportView.xaml;Views\AddAndModifyDolgozoView.xaml;Views\AddAndModifyOsztalyView.xaml;Views\AddAndModifyPartnerView.xaml;Views\BevetelezesekView.xaml;Views\BevWindowView.xaml;Views\CikkekView.xaml;Views\DolgozoKivalasztView.xaml;Views\DolgozoView.xaml;Views\FooldalView.xaml;Views\KiadWindowView.xaml;Views\KivezetesView.xaml;Views\ListakView.xaml;Views\ListDolgozoPrintByGroupView.xaml;Views\PopUpView.xaml;Views\PrintingWindowView.xaml;Views\PrintOsztalyView.xaml;Views\RaktarView.xaml;Views\ShellView.xaml;Views\TorzsView.xaml;Views\VisszavetView.xaml;
 
-63738985634
-83-67372351
-Views\AddAndModifyCikkView.xaml;Views\AddAndModifyCsoportView.xaml;Views\AddAndModifyDolgozoView.xaml;Views\AddAndModifyOsztalyView.xaml;Views\AddAndModifyPartnerView.xaml;Views\BevetelezesekView.xaml;Views\BevWindowView.xaml;Views\CikkekView.xaml;Views\DolgozoKivalasztView.xaml;Views\DolgozoView.xaml;Views\FooldalView.xaml;Views\KiadWindowView.xaml;Views\KivezetesView.xaml;Views\ListakView.xaml;Views\PopUpView.xaml;Views\PrintingWindowView.xaml;Views\RaktarView.xaml;Views\ShellView.xaml;Views\TorzsView.xaml;Views\VisszavetView.xaml;
-
-True
+False
 

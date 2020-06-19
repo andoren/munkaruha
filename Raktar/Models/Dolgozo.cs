@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Caliburn.Micro;
 namespace Raktar.Models
 {
     class Dolgozo
@@ -41,6 +41,13 @@ namespace Raktar.Models
             get {
                 return string.Format("{0} - {1}",Name,GroupName);
             }
+        }
+        private BindableCollection<Munkaruha> ruhaim;
+
+        public BindableCollection<Munkaruha> Ruhaim
+        {
+            get { return ruhaim; }
+            set { ruhaim = value; }
         }
 
 

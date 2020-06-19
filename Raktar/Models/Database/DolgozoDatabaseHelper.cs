@@ -42,6 +42,12 @@ namespace Raktar.Models.Database
             }
             return dolgozok;
         }
+
+        internal BindableCollection<Dolgozo> GetDolgozokByOsztaly(string osztaly)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool AddDolgozo(string newName, Osztaly group)
         {
             bool success = false;

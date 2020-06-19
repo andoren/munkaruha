@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -164,7 +165,14 @@ namespace Raktar.Models
             get { return _szamlaszam; }
             set { _szamlaszam = value; }
         }
-
+        public string FormatedEgysegar {
+            get { return Egysegar.ToString("C0", CultureInfo.GetCultureInfo("hu")); }
+        }
+        public string FormatedOsszesen {
+            get { 
+                return Osszesen.ToString("C0", CultureInfo.GetCultureInfo("hu"));
+            }
+        }
 
     }
 }

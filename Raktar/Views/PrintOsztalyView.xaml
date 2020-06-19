@@ -1,0 +1,35 @@
+﻿<Window x:Class="Raktar.Views.PrintOsztalyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raktar.Views"
+        mc:Ignorable="d" FontSize="26"
+        Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown"    
+        Title="Leltárív" Height="665" Width="925" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None">
+    <Border Background="White" Padding="0"  BorderBrush="#2868b0" BorderThickness="4" CornerRadius="4">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" ></RowDefinition>
+                <RowDefinition Height="*" ></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel HorizontalAlignment="Center"   Grid.Row="0" Grid.ColumnSpan="2">
+                <TextBlock HorizontalAlignment="Center" Foreground="Black" >Csoportos személyi leltár nyomtatása</TextBlock>
+                <TextBlock HorizontalAlignment="Center" x:Name="OsztalyName"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" x:Name="PersonCount"></TextBlock>
+            </StackPanel>
+            <FlowDocumentReader Grid.Row="1" FontSize="16" Grid.ColumnSpan="2" Document="{Binding Document}" ViewingMode="Scroll" Zoom="100"  IsPrintEnabled="True" >
+
+            </FlowDocumentReader>
+            <Button Margin="40,0,40,0" x:Name="PrintAll"  Style="{StaticResource  AddButton}" Grid.Row="2">Nyomtatás</Button>
+            <Button  Margin="40,0,40,0" x:Name="ExitWindow" Style="{StaticResource  DeleteButton}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">Kilépés</Button>
+            <ProgressBar x:Name="Progress" Maximum="{Binding PersonCountForProgress }" Value="{Binding ProgressBarValue}"  Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Margin="40,0,40,0" Height="30" Visibility="{Binding ProgressBarVisibilty}" SmallChange="1" Cursor="Wait" />
+        </Grid>
+    </Border>
+</Window>

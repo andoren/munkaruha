@@ -42,6 +42,11 @@ namespace Raktar.Models
                         scene = new ListakViewModel();
                         break;
                     }
+                case 5:
+                    {
+                        scene = new ListDolgozoPrintByGroupViewModel();
+                        break;
+                    }
 
                 default:
                     break;

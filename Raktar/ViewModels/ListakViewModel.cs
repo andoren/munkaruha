@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using Raktar.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,11 @@ namespace Raktar.ViewModels
 {
     class ListakViewModel:Screen
     {
+        SceneFactory sceneFactory = new SceneFactory();
+        public void DolgozoOsztalyLista() {
+                var doglozokbygroup = new ListDolgozoPrintByGroupViewModel();
+                var manager = new WindowManager();
+                var result = manager.ShowDialog(doglozokbygroup, null, null);
+        }
     }
 }

@@ -28,7 +28,7 @@
     <ProductName>Munkaruha</ProductName>
     <PublisherName>Pekár Mihály</PublisherName>
     <SuiteName>Ótemplomi Szeretetszolgálat</SuiteName>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -164,8 +164,10 @@
     <Compile Include="ViewModels\KiadWindowViewModel.cs" />
     <Compile Include="ViewModels\KivezetesViewModel.cs" />
     <Compile Include="ViewModels\ListakViewModel.cs" />
+    <Compile Include="ViewModels\ListDolgozoPrintByGroupViewModel.cs" />
     <Compile Include="ViewModels\PopUpViewModel.cs" />
     <Compile Include="ViewModels\PrintingWindowViewModel.cs" />
+    <Compile Include="ViewModels\PrintOsztalyViewModel.cs" />
     <Compile Include="ViewModels\RaktarViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\TorzsViewModel.cs" />
@@ -212,11 +214,17 @@
     <Compile Include="Views\ListakView.xaml.cs">
       <DependentUpon>ListakView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListDolgozoPrintByGroupView.xaml.cs">
+      <DependentUpon>ListDolgozoPrintByGroupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PopUpView.xaml.cs">
       <DependentUpon>PopUpView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PrintingWindowView.xaml.cs">
       <DependentUpon>PrintingWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintOsztalyView.xaml.cs">
+      <DependentUpon>PrintOsztalyView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RaktarView.xaml.cs">
       <DependentUpon>RaktarView.xaml</DependentUpon>
@@ -275,7 +283,9 @@
     <Resource Include="Pictrures\user-xxl.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictrures\fejlec.png" />
+    <Resource Include="Pictrures\fejlec.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\AddAndModifyCikkView.xaml">
@@ -334,11 +344,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ListDolgozoPrintByGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PopUpView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PrintingWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PrintOsztalyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -389,6 +407,16 @@
     <Resource Include="Pictrures\clos.png" />
     <Resource Include="Pictrures\maximize.png" />
     <Resource Include="Pictrures\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pictrures\fejlec1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pictrures\fejlecvajda.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
