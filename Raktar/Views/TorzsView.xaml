@@ -21,7 +21,13 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
-        <!--Dolgozók-->        
+        <ContentControl Grid.Row="0" Grid.Column="1" x:Name="WorkerContainer"></ContentControl>
+        <ContentControl Grid.Row="0" Grid.Column="2" x:Name="OsztalyContainer"></ContentControl>
+        <ContentControl Grid.Row="0" Grid.Column="3"  x:Name="ItemContainer"></ContentControl>
+        <ContentControl Grid.Row="0" Grid.Column="4" x:Name="PartnerContainer"></ContentControl>
+        
+        <!--OLD TORZS-->
+        <!--Dolgozók--><!--        
         <Grid Margin="15" Grid.Column="1" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
@@ -44,7 +50,7 @@
                 <Button x:Name="RemoveWorker"  Style="{StaticResource DeleteButton}"   Grid.Column="1"  >Törlés</Button>
             </Grid>
         </Grid>
-        <!--Osztaly-->
+        --><!--Osztaly--><!--
         <Grid Margin="15" Grid.Column="2" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
@@ -67,7 +73,7 @@
             </Grid>
         </Grid>
         
-        <!--Cikkek-->
+        --><!--Cikkek--><!--
         <Grid Margin="15" Grid.Column="3" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
@@ -89,7 +95,7 @@
                 <Button x:Name="RemoveCikk" Style="{StaticResource DeleteButton}"  Grid.Column="1"  >Törlés</Button>
             </Grid>
         </Grid>
-        <!--Partnerek-->
+        --><!--Partnerek--><!--
         <Grid Margin="15" Grid.Column="4" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
@@ -110,6 +116,7 @@
                 <Button x:Name="AddPartner" Style="{StaticResource AddButton}"  Grid.Column="0"     >Hozzáad</Button>
                 <Button x:Name="RemovePartner" Style="{StaticResource DeleteButton}"  Grid.Column="1"   >Törlés</Button>
             </Grid>
-        </Grid>
+        </Grid>-->
+        
     </Grid>
 </UserControl>
