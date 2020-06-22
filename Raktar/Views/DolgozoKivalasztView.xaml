@@ -28,7 +28,7 @@
                 <Button x:Name="Save" Margin="0,0,20,0" Width="100" Height="40">
                     Mentés
                 </Button>
-                <Button x:Name="Close"  Width="100" Height="40">
+                <Button x:Name="Exit"  Width="100" Height="40">
                     Mégse
                 </Button>
             </StackPanel>

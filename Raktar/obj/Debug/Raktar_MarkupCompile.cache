@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Repos\Munkaruha\Raktar\App.xaml
-221219258172
+26-578397134
 2-1740635784
-662035216115
+741061063256
 83-370572647
-Views\AddAndModifyCikkView.xaml;Views\AddAndModifyCsoportView.xaml;Views\AddAndModifyDolgozoView.xaml;Views\AddAndModifyOsztalyView.xaml;Views\AddAndModifyPartnerView.xaml;Views\BevetelezesekView.xaml;Views\BevWindowView.xaml;Views\CikkekView.xaml;Views\DolgozoKivalasztView.xaml;Views\DolgozoView.xaml;Views\FooldalView.xaml;Views\KiadWindowView.xaml;Views\KivezetesView.xaml;Views\ListakView.xaml;Views\ListDolgozoPrintByGroupView.xaml;Views\PopUpView.xaml;Views\PrintingWindowView.xaml;Views\PrintOsztalyView.xaml;Views\RaktarView.xaml;Views\ShellView.xaml;Views\TorzsView.xaml;Views\VisszavetView.xaml;
+Views\AddAndModifyCikkView.xaml;Views\AddAndModifyCsoportView.xaml;Views\AddAndModifyDolgozoView.xaml;Views\AddAndModifyOsztalyView.xaml;Views\AddAndModifyPartnerView.xaml;Views\BevetelezesekView.xaml;Views\BevWindowView.xaml;Views\CikkekTorzsView.xaml;Views\CikkekView.xaml;Views\DolgozoKivalasztView.xaml;Views\DolgozokView.xaml;Views\DolgozoView.xaml;Views\FooldalView.xaml;Views\KiadWindowView.xaml;Views\KivezetesView.xaml;Views\ListakView.xaml;Views\ListDolgozoPrintByGroupView.xaml;Views\OsztalyokView.xaml;Views\PartnerekView.xaml;Views\PopUpView.xaml;Views\PrintingWindowView.xaml;Views\PrintOsztalyView.xaml;Views\RaktarView.xaml;Views\ShellView.xaml;Views\TorzsView.xaml;Views\VisszavetView.xaml;
 
 False
 

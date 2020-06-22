@@ -74,12 +74,12 @@ namespace Raktar.ViewModels
 
         private string _name;
 
-        public string Name
+        public string Nev
         {
             get { return _name; }
             set {
                 _name = value;
-                NotifyOfPropertyChange(() => Name);
+                NotifyOfPropertyChange(() => Nev);
             }
         }
         private string _count;
@@ -181,7 +181,7 @@ namespace Raktar.ViewModels
             var result = manager.ShowDialog(cikkwindow, null, null);
 
         }
-        public void Close()
+        public void Exit()
         {
             
             TryClose(false);
@@ -209,16 +209,16 @@ namespace Raktar.ViewModels
                 MessageBox.Show("Nincs partner kiválasztva !");
                 return;
             } 
-            var ruha = new Munkaruha() {Cikkszam = Number, Mennyiseg = int.Parse(Count), Id = this.Id, Mertekegyseg = Unit, Cikknev = Name, Egysegar = Price, Partner = Partner.Name, PartnerId = Partner.Id, Szamlaszam = this.Szamlaszam };
+            var ruha = new Munkaruha() {Cikkszam = Number, Mennyiseg = int.Parse(Count), Id = this.Id, Mertekegyseg = Unit, Cikknev = Nev, Egysegar = Price, Partner = Partner.Name, PartnerId = Partner.Id, Szamlaszam = this.Szamlaszam };
             Ruhak.Add(ruha);
-            Number = string.Empty; Count = string.Empty; Unit = string.Empty; Name = string.Empty; this.Price = string.Empty;
+            Number = string.Empty; Count = string.Empty; Unit = string.Empty; Nev = string.Empty; this.Price = string.Empty;
             NotifyOfPropertyChange(() => Ruhak);
             NotifyOfPropertyChange(() => Sum);
         }
 
         public void SetCikk(Munkaruha ruha)
         {
-            Name = ruha.Cikknev;
+            Nev = ruha.Cikknev;
             Number = ruha.Cikkszam;
             Unit = ruha.Mertekegyseg;
             Id = ruha.Id;

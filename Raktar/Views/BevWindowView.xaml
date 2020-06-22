@@ -39,7 +39,7 @@
 
                     <TextBlock Grid.Column="2"  Margin="5,0,5,0" VerticalAlignment="Center">Megnevezés:</TextBlock>
 
-                    <TextBox Style="{StaticResource DesignedTextBox}" Grid.Column="3" x:Name="Name" VerticalScrollBarVisibility="Auto" IsReadOnly="True"  Margin="5,0,5,0" VerticalAlignment="Center"></TextBox>
+                    <TextBox Style="{StaticResource DesignedTextBox}" Grid.Column="3" x:Name="Nev" VerticalScrollBarVisibility="Auto" IsReadOnly="True"  Margin="5,0,5,0" VerticalAlignment="Center"></TextBox>
 
                     <TextBlock Grid.Column="4"  Margin="5,0,5,0" VerticalAlignment="Center">Mennyiség</TextBlock>
 
@@ -94,7 +94,7 @@
                 <Button x:Name="Save" Width="100" Height="45" Margin="0,0,60,0">
                     Mentés
                 </Button>
-                <Button x:Name="Close" Width="100" Height="45">
+                <Button x:Name="Exit" Width="100" Height="45">
                     Kilépés
                 </Button>
             </StackPanel>

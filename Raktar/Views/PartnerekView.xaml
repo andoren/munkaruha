@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Raktar.Views.PartnerekView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Raktar.Views"
+             mc:Ignorable="d" 
+              MinHeight="400"
+             MinWidth="200"
+             xmlns:cal="http://www.caliburnproject.org">
+    <Grid Margin="15" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontWeight="Bold" Foreground="#2868b0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"  >Partnerek</TextBlock>
+        <TextBox Style="{StaticResource SearchBox}" x:Name="SearchPartner"  FontSize="16" Grid.Row="1" VerticalContentAlignment="Center" cal:Message.Attach="[Event KeyUp] = [Action SearchForPartners($executionContext)]">Keresés...</TextBox>
+        <ListBox x:Name="SearchablePartners" DisplayMemberPath="Name" FontSize="16" Grid.Row="2" cal:Message.Attach="[Event MouseDoubleClick] = [Action DoubleClickPartnerList()]"  SelectedItem="{Binding SelectedPartner}">
+
+        </ListBox>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AddPartner" Style="{StaticResource AddButton}"  Grid.Column="0"     >Hozzáad</Button>
+            <Button x:Name="RemovePartner" Style="{StaticResource DeleteButton}"  Grid.Column="1"   >Törlés</Button>
+        </Grid>
+    </Grid>
+</UserControl>

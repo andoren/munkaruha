@@ -65,7 +65,7 @@ namespace Raktar.ViewModels
             window.SetCikk(Munkaruha);
             TryClose(true);
         }
-        public void Close() {
+        public void Exit() {
             TryClose(false);
         }
     }

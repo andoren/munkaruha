@@ -12,7 +12,7 @@
         Title="Dolgozó" Height="190" Width="424" WindowStartupLocation="CenterOwner">
     <Border Padding="0" Margin="0" Background="White" BorderBrush="#2868b0" BorderThickness="4" CornerRadius="4">
     <StackPanel HorizontalAlignment="Stretch" >
-        <TextBlock FontSize="35" Margin="5" HorizontalAlignment="Center" x:Name="Title">Új dolgozó hozzáadása</TextBlock>
+        <TextBlock FontSize="35" Margin="5" HorizontalAlignment="Center">Új dolgozó hozzáadása</TextBlock>
         <Grid Margin="5" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>

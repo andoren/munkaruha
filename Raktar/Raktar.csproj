@@ -156,8 +156,10 @@
     <Compile Include="ViewModels\AddAndModifyPartnerViewModel.cs" />
     <Compile Include="ViewModels\BevetelezesekViewModel.cs" />
     <Compile Include="ViewModels\BevWindowViewModel.cs" />
+    <Compile Include="ViewModels\CikkekTorzsViewModel.cs" />
     <Compile Include="ViewModels\CikkekViewModel.cs" />
     <Compile Include="ViewModels\DolgozoKivalasztViewModel.cs" />
+    <Compile Include="ViewModels\DolgozokViewModel.cs" />
     <Compile Include="ViewModels\DolgozoViewModel.cs" />
     <Compile Include="ViewModels\FooldalViewModel.cs" />
     <Compile Include="Models\Partner.cs" />
@@ -165,6 +167,8 @@
     <Compile Include="ViewModels\KivezetesViewModel.cs" />
     <Compile Include="ViewModels\ListakViewModel.cs" />
     <Compile Include="ViewModels\ListDolgozoPrintByGroupViewModel.cs" />
+    <Compile Include="ViewModels\OsztalyokViewModel.cs" />
+    <Compile Include="ViewModels\PartnerekViewModel.cs" />
     <Compile Include="ViewModels\PopUpViewModel.cs" />
     <Compile Include="ViewModels\PrintingWindowViewModel.cs" />
     <Compile Include="ViewModels\PrintOsztalyViewModel.cs" />
@@ -193,11 +197,17 @@
     <Compile Include="Views\BevWindowView.xaml.cs">
       <DependentUpon>BevWindowView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CikkekTorzsView.xaml.cs">
+      <DependentUpon>CikkekTorzsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CikkekView.xaml.cs">
       <DependentUpon>CikkekView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DolgozoKivalasztView.xaml.cs">
       <DependentUpon>DolgozoKivalasztView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DolgozokView.xaml.cs">
+      <DependentUpon>DolgozokView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DolgozoView.xaml.cs">
       <DependentUpon>DolgozoView.xaml</DependentUpon>
@@ -216,6 +226,12 @@
     </Compile>
     <Compile Include="Views\ListDolgozoPrintByGroupView.xaml.cs">
       <DependentUpon>ListDolgozoPrintByGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OsztalyokView.xaml.cs">
+      <DependentUpon>OsztalyokView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerekView.xaml.cs">
+      <DependentUpon>PartnerekView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PopUpView.xaml.cs">
       <DependentUpon>PopUpView.xaml</DependentUpon>
@@ -316,11 +332,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CikkekTorzsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CikkekView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DolgozoKivalasztView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DolgozokView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -345,6 +369,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ListDolgozoPrintByGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OsztalyokView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PartnerekView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

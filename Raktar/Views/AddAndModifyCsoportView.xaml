@@ -13,7 +13,7 @@
         Title="Cikk" Height="140" Width="454" WindowStartupLocation="CenterOwner">
     <Border Padding="0" Margin="0" Background="White" BorderBrush="#2868b0" BorderThickness="4" CornerRadius="4">
     <StackPanel HorizontalAlignment="Stretch" >
-        <TextBlock FontSize="35" Margin="5" HorizontalAlignment="Center" x:Name="Title">Cikkcsoport hozzáadása</TextBlock>
+        <TextBlock FontSize="35" Margin="5" HorizontalAlignment="Center" >Cikkcsoport hozzáadása</TextBlock>
         <Grid Margin="5" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
