@@ -23,8 +23,9 @@
         </Grid.ColumnDefinitions>
         <ContentControl Grid.Row="0" Grid.Column="1" x:Name="WorkerContainer"></ContentControl>
         <ContentControl Grid.Row="0" Grid.Column="2" x:Name="OsztalyContainer"></ContentControl>
-        <ContentControl Grid.Row="0" Grid.Column="3"  x:Name="ItemContainer"></ContentControl>
-        <ContentControl Grid.Row="0" Grid.Column="4" x:Name="PartnerContainer"></ContentControl>
+        <ContentControl Grid.Row="0" Grid.Column="3" x:Name="PartnerContainer"></ContentControl>
+        <ContentControl Grid.Row="0" Grid.Column="4"  x:Name="ItemContainer"></ContentControl>
+       
         
         <!--OLD TORZS-->
         <!--Dolgozók--><!--        

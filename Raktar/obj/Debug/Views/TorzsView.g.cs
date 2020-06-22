@@ -132,9 +132,9 @@ namespace Raktar.Views
         }
 
         internal System.Windows.Controls.ContentControl WorkerContainer;
-        internal System.Windows.Controls.ContentControl OsztalyContainer;
         internal System.Windows.Controls.ContentControl ItemContainer;
         internal System.Windows.Controls.ContentControl PartnerContainer;
+        internal System.Windows.Controls.ContentControl ClassContainer;
     }
 }
 
