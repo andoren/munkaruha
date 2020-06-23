@@ -15,7 +15,7 @@
         <RowDefinition Height="40"/>
     </Grid.RowDefinitions>
     <TextBlock FontWeight="Bold" Foreground="#2868b0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" >Cikkek</TextBlock>
-    <TextBox Style="{StaticResource SearchBox}" x:Name="SearchCikk" FontSize="16"  Grid.Row="1" VerticalContentAlignment="Center" cal:Message.Attach="[Event KeyUp] = [Action SearchingForRuha($executionContext)]; [Event LostFocus] = [Action LostFocus]">Keresés...</TextBox>
+        <TextBox Style="{StaticResource SearchBox}" x:Name="SearchCikk" FontSize="16"  Grid.Row="1" VerticalContentAlignment="Center" cal:Message.Attach="[Event KeyUp] = [Action SearchingForRuha($executionContext)]; [Event LostFocus] = [Action LostFocus()]; [Event GotFocus] = [Action OnFocus]">Keresés...</TextBox>
     <ListBox x:Name="SearchableRuha" DisplayMemberPath="NameForCikk" FontSize="16" Grid.Row="2" cal:Message.Attach="[Event MouseDoubleClick] = [Action DoubleClickMunkaruhaList()]"  SelectedItem="{Binding SelectedMunkaruha}">
 
     </ListBox>

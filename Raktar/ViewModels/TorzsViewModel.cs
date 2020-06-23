@@ -50,36 +50,6 @@ namespace Raktar.ViewModels
         {
             get { return _itemContainer; }
             set { _itemContainer = value; }
-        }
-
-
-
-
-
-     
-
-        
-
-
-        //private void GetDataFromDatabase() {
-
-
-
-  
-
-        //}
-
-
-        //public void LostFocus() {
-        //    SearchCikk = "Keresés...";
-        //    Search = "Keresés...";
-        //    SearchPartner = "Keresés...";
-        //    SearchGroup = "Keresés...";
-        //    SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
-        //    SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
-        //    SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
-        //    SearchableDolgozo = new BindableCollection<Dolgozo>(Dolgozok);
-
-        //}
+        } 
     }
 }

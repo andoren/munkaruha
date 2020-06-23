@@ -16,7 +16,7 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <TextBlock FontWeight="Bold" Foreground="#2868b0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"  >Partnerek</TextBlock>
-        <TextBox Style="{StaticResource SearchBox}" x:Name="SearchPartner"  FontSize="16" Grid.Row="1" VerticalContentAlignment="Center" cal:Message.Attach="[Event KeyUp] = [Action SearchForPartners($executionContext)]">Keresés...</TextBox>
+        <TextBox Style="{StaticResource SearchBox}" x:Name="SearchPartner"  FontSize="16" Grid.Row="1" VerticalContentAlignment="Center" cal:Message.Attach="[Event KeyUp] = [Action SearchForPartners($executionContext)]; [Event LostFocus] = [Action LostFocus()]; [Event GotFocus] = [Action OnFocus]">Keresés...</TextBox>
         <ListBox x:Name="SearchablePartners" DisplayMemberPath="Name" FontSize="16" Grid.Row="2" cal:Message.Attach="[Event MouseDoubleClick] = [Action DoubleClickPartnerList()]"  SelectedItem="{Binding SelectedPartner}">
 
         </ListBox>

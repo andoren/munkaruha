@@ -576,29 +576,7 @@
                 <Setter Property="Margin" Value="5"/>
                 <Setter Property="Background" Value="#f1f3f4"/>
                 <Setter Property="Foreground" Value="#2868b0"/>
-                <Style.Triggers>
-                    <EventTrigger RoutedEvent="GotFocus">
-                        
-                        <EventTrigger.Actions>
-
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="FontSize" From="14" To="18" />
-                                    
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger.Actions>
-                    </EventTrigger>
-                    <EventTrigger RoutedEvent="LostFocus">
-                        <EventTrigger.Actions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                    <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="FontSize" From="18" To="14"  />
-                                </Storyboard>
-                                </BeginStoryboard>
-                        </EventTrigger.Actions>
-                    </EventTrigger>
-                </Style.Triggers>
+ 
             </Style>
         </ResourceDictionary>
   

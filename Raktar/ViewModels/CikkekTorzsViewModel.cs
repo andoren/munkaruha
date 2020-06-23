@@ -142,5 +142,13 @@ namespace Raktar.ViewModels
             }
         }
         #endregion
+        public void LostFocus()
+        {
+            SearchCikk = "Keresés...";
+        }
+        public void OnFocus()
+        {
+            SearchCikk = "";
+        }
     }
 }

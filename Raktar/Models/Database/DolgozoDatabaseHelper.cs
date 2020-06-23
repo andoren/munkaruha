@@ -438,17 +438,19 @@ namespace Raktar.Models.Database
             command.CommandText = "RemoveOsztaly";
             MySqlParameter pid = new MySqlParameter()
             {
-                ParameterName = "pid",
+                ParameterName = "delid",
                 Value = osztaly.Id,
                 Direction = System.Data.ParameterDirection.Input,
                 DbType = System.Data.DbType.Int32
             };
             MySqlParameter eredmeny = new MySqlParameter()
             {
-                Direction = System.Data.ParameterDirection.Output,
+                Direction = System.Data.ParameterDirection.ReturnValue,
                 ParameterName = "eredmeny",
                 DbType = System.Data.DbType.Int32
             };
+            command.Parameters.Add(pid);
+            command.Parameters.Add(eredmeny);
             try
             {
                 OpenConnection(connection);

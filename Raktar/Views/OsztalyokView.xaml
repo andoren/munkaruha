@@ -16,7 +16,7 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <TextBlock FontWeight="Bold" Foreground="#2868b0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" >Osztályok</TextBlock>
-        <TextBox Style="{StaticResource SearchBox}" x:Name="SearchGroup" FontSize="16"  Grid.Row="1" VerticalContentAlignment="Center" cal:Message.Attach="[Event KeyUp] = [Action SearchingForCsoport($executionContext)]">Keresés...</TextBox>
+        <TextBox Style="{StaticResource SearchBox}" x:Name="SearchGroup" FontSize="16"  Grid.Row="1" VerticalContentAlignment="Center" cal:Message.Attach="[Event KeyUp] = [Action SearchingForCsoport($executionContext)]; [Event LostFocus] = [Action LostFocus()]; [Event GotFocus] = [Action OnFocus]">Keresés...</TextBox>
         <ListBox x:Name="SearchableCsoportok" DisplayMemberPath="Name" FontSize="16" Grid.Row="2" cal:Message.Attach="[Event MouseDoubleClick] = [Action DoubleClickCsoportList()]"  SelectedItem="{Binding SelectedCsoport}">
 
         </ListBox>
