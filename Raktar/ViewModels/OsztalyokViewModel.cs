@@ -127,7 +127,7 @@ namespace Raktar.ViewModels
         {
             if (SelectedCsoport != null)
             {
-                var result = MessageBox.Show(string.Format("Valóban törölni szeretné a következő csoportot: {0} ?", SelectedCsoport.Name), "Csoport törlése", MessageBoxButton.YesNo);
+                var result = MessageBox.Show(string.Format("Valóban törölni szeretné a következő osztályt: {0} ?", SelectedCsoport.Name), "Osztály törlése", MessageBoxButton.YesNo);
                 if (result == MessageBoxResult.Yes)
                 {
                     var dolgozoHelper = new DolgozoDatabaseHelper();
@@ -135,7 +135,7 @@ namespace Raktar.ViewModels
                     {
                         Csoportok = dolgozoHelper.GetOsztalyok();
                         SearchableCsoportok = new BindableCollection<Osztaly>(Csoportok);
-                        MessageBox.Show("Csoport törölve.");
+                        MessageBox.Show("Osztály törölve.");
                     }
                     else
                     {

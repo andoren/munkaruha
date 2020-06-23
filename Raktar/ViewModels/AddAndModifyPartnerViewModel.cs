@@ -11,17 +11,11 @@ namespace Raktar.ViewModels
 {
     class AddAndModifyPartnerViewModel:Screen
     {
-        public AddAndModifyPartnerViewModel(BindableCollection<Partner> Partnerek)
+        public AddAndModifyPartnerViewModel()
         {
-            this.Partnerek = Partnerek;
+            
         }
-        private BindableCollection<Partner> _partnerek;
 
-        public BindableCollection<Partner> Partnerek
-        {
-            get { return _partnerek; }
-            set { _partnerek = value; }
-        }
         #region partner properties
         private string _newname;
 

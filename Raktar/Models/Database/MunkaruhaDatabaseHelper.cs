@@ -427,7 +427,7 @@ namespace Raktar.Models.Database
             {
                 ParameterName = "rmertekegyseg",
                 Direction = System.Data.ParameterDirection.Input,
-                DbType = System.Data.DbType.Int32,
+                DbType = System.Data.DbType.String,
                 Value = ruha.Mertekegyseg
             };
             MySqlParameter csoportid = new MySqlParameter()

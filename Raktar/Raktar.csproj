@@ -167,6 +167,7 @@
     <Compile Include="ViewModels\KivezetesViewModel.cs" />
     <Compile Include="ViewModels\ListakViewModel.cs" />
     <Compile Include="ViewModels\ListDolgozoPrintByGroupViewModel.cs" />
+    <Compile Include="ViewModels\ModifyPartnerViewModel.cs" />
     <Compile Include="ViewModels\OsztalyokViewModel.cs" />
     <Compile Include="ViewModels\PartnerekViewModel.cs" />
     <Compile Include="ViewModels\PopUpViewModel.cs" />
@@ -226,6 +227,9 @@
     </Compile>
     <Compile Include="Views\ListDolgozoPrintByGroupView.xaml.cs">
       <DependentUpon>ListDolgozoPrintByGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModifyPartnerView.xaml.cs">
+      <DependentUpon>ModifyPartnerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\OsztalyokView.xaml.cs">
       <DependentUpon>OsztalyokView.xaml</DependentUpon>
@@ -369,6 +373,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ListDolgozoPrintByGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ModifyPartnerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

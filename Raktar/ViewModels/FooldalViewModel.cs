@@ -45,7 +45,7 @@ namespace Raktar.ViewModels
         }
         public void Partner() {
             var windowmanager = new WindowManager();
-            var window = new AddAndModifyPartnerViewModel(new BindableCollection<Partner>());
+            var window = new AddAndModifyPartnerViewModel();
             var result = windowmanager.ShowDialog(window, null, null);
             if (result == true)
             {

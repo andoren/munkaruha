@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace Raktar.ViewModels
 {
-    class PartnerekViewModel:Screen
+    class PartnerekViewModel:Screen,IHandle<Partner>
     {
         public PartnerekViewModel()
         {
@@ -66,7 +66,18 @@ namespace Raktar.ViewModels
         public void DoubleClickPartnerList()
         {
             if (SelectedPartner != null)
-                MessageBox.Show(SelectedPartner.Name);
+            {
+                var windowmanager = new WindowManager();
+                var window = new ModifyPartnerViewModel(SelectedPartner);
+                var result = windowmanager.ShowDialog(window, null, null);
+                if (result == true)
+                {
+                    PartnerHelper partnerhelper = new PartnerHelper();
+                    Partnerek = partnerhelper.GetPartners();
+                    SearchablePartners = new BindableCollection<Partner>(Partnerek);
+                    MessageBox.Show("Partner módosítva.");
+                }
+            }
         }
 
         public void SearchForPartners(ActionExecutionContext context)
@@ -115,7 +126,7 @@ namespace Raktar.ViewModels
         public void AddPartner()
         {
             var windowmanager = new WindowManager();
-            var window = new AddAndModifyPartnerViewModel(Partnerek);
+            var window = new AddAndModifyPartnerViewModel();
             var result = windowmanager.ShowDialog(window, null, null);
             if (result == true)
             {
@@ -131,6 +142,11 @@ namespace Raktar.ViewModels
         }
         public void OnFocus() {
             SearchPartner = "";
+        }
+
+        public void Handle(Partner message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -42,6 +42,11 @@ namespace Raktar.Models.Database
             return partnerek;
         }
 
+        internal bool ModifyPartner(Partner partner)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool DeletePartner(int id)
         {
            
