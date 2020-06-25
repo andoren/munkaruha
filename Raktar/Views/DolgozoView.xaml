@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Raktar.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#f1f3f4">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="*"/>
@@ -29,7 +29,7 @@
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" >
-            <DataGrid x:Name="Ruhak" Grid.Row="2" Grid.RowSpan="2" FontSize="16" IsReadOnly="True" Cursor="Hand" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single" >
+            <DataGrid HorizontalScrollBarVisibility="Auto" x:Name="Ruhak" Grid.Row="2" Grid.RowSpan="2" FontSize="16" IsReadOnly="True" Cursor="Hand" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Cikkszam}" Width="*" Header="Cikkszám" ></DataGridTextColumn>
                     <DataGridTextColumn Binding="{Binding Cikknev}" Width="*" Header="Cikknév"></DataGridTextColumn>

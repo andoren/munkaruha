@@ -8,7 +8,7 @@
              FontSize="22"
              FontFamily="Roboto"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#f1f3f4">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -34,8 +34,8 @@
             </Grid.ColumnDefinitions>
             <!--Dolgozó-->
             <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="1"  >
-                <Button Background="#f1f3f4" VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="Dolgozo" Style="{StaticResource MainWindowButton}" ToolTip="Dolgozó hozzáadása"   >
-                    <Grid Background="#f1f3f4" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Button  VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="Dolgozo" Style="{StaticResource MainWindowButton}" ToolTip="Dolgozó hozzáadása"   >
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
@@ -49,8 +49,8 @@
 
             <!--Osztály-->
             <Grid Grid.Column="2" Grid.Row="1">
-                <Button Background="#f1f3f4" Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="Osztaly" ToolTip="Osztály hozzáadása"  >
-                    <Grid Background="#f1f3f4" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Button  Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="Osztaly" ToolTip="Osztály hozzáadása"  >
+                    <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Center">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
@@ -64,8 +64,8 @@
 
             <!--Cikk-->
             <Grid  Grid.Column="3" Grid.Row="1" >
-                <Button Background="#f1f3f4" Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" x:Name="Cikk" ToolTip="Cikk hozzáadása" >
-                    <Grid Background="#f1f3f4" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Button Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" x:Name="Cikk" ToolTip="Cikk hozzáadása" >
+                    <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Center">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
@@ -89,9 +89,9 @@
           
             <!--Partner-->
             <Grid Grid.Column="4" Grid.Row="1">
-                <Button Background="#f1f3f4" x:Name="Partner" Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTip="Partner hozzáadása"   >
+                <Button  x:Name="Partner" Style="{StaticResource MainWindowButton}" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTip="Partner hozzáadása"   >
 
-                    <Grid Background="#f1f3f4" MinHeight="250"  HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <Grid  MinHeight="250"  HorizontalAlignment="Stretch" VerticalAlignment="Center">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>

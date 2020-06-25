@@ -107,6 +107,7 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KiadWindowView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KivezetesView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ListakView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ListDolgozoPrintByGroupView.g.cs
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ModifyPartnerView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\OsztalyokView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PartnerekView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PopUpView.g.cs
@@ -139,6 +140,7 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KiadWindowView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KivezetesView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ListakView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ListDolgozoPrintByGroupView.baml
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ModifyPartnerView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\OsztalyokView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PartnerekView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PopUpView.baml
@@ -157,6 +159,3 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.application
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csproj.CopyComplete
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.exe
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.pdb
-E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csprojAssemblyReference.cache
-E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ModifyPartnerView.g.cs
-E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ModifyPartnerView.baml

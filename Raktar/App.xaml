@@ -574,7 +574,7 @@
             <Style x:Key="SearchBox" TargetType="TextBox">
                 <Setter Property="BorderThickness" Value="0,0,0,1"/>
                 <Setter Property="Margin" Value="5"/>
-                <Setter Property="Background" Value="#f1f3f4"/>
+
                 <Setter Property="Foreground" Value="#2868b0"/>
  
             </Style>

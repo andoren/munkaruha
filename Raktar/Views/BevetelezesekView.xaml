@@ -3,10 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Raktar.Views"
-        xmlns:SystemGlobalization="clr-namespace:System.Globalization;assembly=mscorlib"
         mc:Ignorable="d"
         Background="Transparent"
+
         MinHeight="450" MinWidth="800" >
     <Grid>
         <Grid.RowDefinitions>
@@ -21,7 +20,7 @@
             <TextBlock VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Margin="5">Bevételezés kiválasztása</TextBlock>
             <ComboBox Margin="5" MinWidth="100" x:Name="Bevetelezesek" SelectedItem="{Binding Selectedbevetel}" DisplayMemberPath="Szamlaszam"/>
         </StackPanel>
-        <DataGrid x:Name="Ruhak" Grid.Row="1" FontSize="13" Cursor="Hand" IsReadOnly="True" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single">
+        <DataGrid x:Name="Ruhak" Grid.Row="1" FontSize="16" Cursor="Hand" IsReadOnly="True" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Cikk Kód" Binding="{Binding Cikkszam}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Cikk Megnevezése" Binding="{Binding Cikknev}" Width="2*"></DataGridTextColumn>
