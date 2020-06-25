@@ -9,8 +9,8 @@
         AllowsTransparency="True"
         Background="Transparent"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
-        Title="Partner" Height="325" Width="450" WindowStartupLocation="CenterOwner">
-    <Border Padding="0" Margin="0" Background="White" BorderBrush="#2868b0" BorderThickness="4" CornerRadius="4">
+        Title="Partner" Height="170" Width="450" WindowStartupLocation="CenterOwner">
+    <Border Padding="0" Background="White" BorderBrush="#2868b0" BorderThickness="4" CornerRadius="4">
     <StackPanel Margin="10">
         <!--Első sor-->
             <TextBlock FontSize="36" HorizontalAlignment="Center"> Új partner hozzáadása</TextBlock>
@@ -37,14 +37,7 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock FontSize="20" VerticalAlignment="Center" Margin="5" Grid.Row="0" Grid.Column="0">Megye: </TextBlock>
-                <ComboBox FontSize="20" Margin="5" Grid.Row="0" Grid.Column="1" x:Name="Megye" DisplayMemberPath="Name" SelectedItem="{Binding SelectedMegye}"></ComboBox>
-                <TextBlock FontSize="20"  VerticalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="0">Város:</TextBlock>
-                <TextBox FontSize="20" VerticalContentAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="1" x:Name="Varos" ></TextBox>
-                <TextBlock FontSize="20"  VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="0">Utca, szám:</TextBlock>
-                <TextBox FontSize="20" VerticalContentAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" x:Name="Utca" ></TextBox>
-                <TextBlock FontSize="20"  VerticalAlignment="Center" Margin="5" Grid.Row="3" Grid.Column="0">Telefonszám: </TextBlock>
-                <TextBox FontSize="20" VerticalContentAlignment="Center" Margin="5" Grid.Row="3" Grid.Column="1" x:Name="Mobil" ></TextBox>
+
         </Grid>
             
         <Grid Margin="5" >

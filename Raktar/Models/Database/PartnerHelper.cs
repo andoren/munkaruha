@@ -42,9 +42,30 @@ namespace Raktar.Models.Database
             return partnerek;
         }
 
-        internal bool ModifyPartner(Partner partner)
+        public bool ModifyPartner(Partner partner)
         {
-            throw new NotImplementedException();
+            MySqlCommand command = new MySqlCommand();
+            MySqlConnection connection = getConnection();
+            command.Connection = connection;
+            command.CommandText = "modifypartner";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("pid",partner.Id);
+            command.Parameters.AddWithValue("pname",partner.Name);
+            bool result = false ;
+            try
+            {
+                OpenConnection(connection);
+                result = command.ExecuteNonQuery() == 0?false:true;
+            }
+            catch (Exception e)
+            {
+
+                Logger.Log(e.Message);
+            }
+            finally {
+                CloseConnection(connection);
+            }
+            return result;
         }
 
         public bool DeletePartner(int id)
