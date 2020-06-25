@@ -57,6 +57,40 @@ namespace Raktar.Models.Database
             return munkaruhak;
         }
 
+        internal BindableCollection<Bevetel> GetDistinctBevetByPartner(Partner selectedPartner)
+        {
+            MySqlCommand command = new MySqlCommand();
+            MySqlConnection connection = getConnection();
+            command.Connection = connection;
+            command.CommandText = "getDistinctBevetByPartner";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            BindableCollection<Bevetel> bevetelek = new BindableCollection<Bevetel>();
+            command.Parameters.AddWithValue("pid",selectedPartner.Id);
+            try
+            {
+                OpenConnection(connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    bevetelek.Add(new Bevetel()
+                    {
+                        BevetId = int.Parse(reader["id"].ToString()),
+                        Szamlaszam = reader["szam"].ToString()
+                    });
+                }
+            }
+            catch (Exception e)
+            {
+
+                Logger.Log(e.Message);
+            }
+            finally
+            {
+                CloseConnection(connection);
+            }
+            return bevetelek;
+        }
+
         public BindableCollection<Munkaruha> GetRuhaByBevetId(int bevetId)
         {
             MySqlCommand command = new MySqlCommand();

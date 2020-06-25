@@ -14,10 +14,19 @@ namespace Raktar.ViewModels
 
         public BevetelezesekViewModel()
         {
-            MunkaruhaDatabaseHelper helper = new MunkaruhaDatabaseHelper();
-            Bevetelezesek = helper.GetDistinctBevet();
+            
+            PartnerHelper partnerHelper = new PartnerHelper();
+            Partnerek = partnerHelper.GetPartners();
+
             Ruhak = new BindableCollection<Munkaruha>();
+            if (Partnerek.Count > 0) {
+                SelectedPartner = Partnerek[0];
+               
+            }
+            
+
         }
+        MunkaruhaDatabaseHelper helper = new MunkaruhaDatabaseHelper();
         public int FullPrice
         {
             get {
@@ -30,7 +39,26 @@ namespace Raktar.ViewModels
             }
 
         }
+        private Partner _selectedPartner ;
 
+        public Partner SelectedPartner 
+        {
+            get { return _selectedPartner; }
+            set { _selectedPartner = value;
+                NotifyOfPropertyChange(()=>SelectedPartner);
+                NotifyOfPropertyChange(()=> Bevetelezesek);
+            }
+        }
+        private BindableCollection<Partner> _partnerek = new BindableCollection<Partner>();
+
+        public BindableCollection<Partner> Partnerek
+        {
+            get { return _partnerek; }
+            set { 
+                _partnerek = value;
+                NotifyOfPropertyChange(()=>Partnerek);
+            }   
+        }
 
         public string Sum
         {
@@ -40,12 +68,15 @@ namespace Raktar.ViewModels
         }
 
 
-        private BindableCollection<Bevetel> _bevetelezesek;
 
         public BindableCollection<Bevetel> Bevetelezesek
         {
-            get { return _bevetelezesek; }
-            set { _bevetelezesek = value; }
+            get {
+                if (Partnerek.Count > 0)
+                    return helper.GetDistinctBevetByPartner(SelectedPartner);
+                else return new BindableCollection<Bevetel>();
+            }
+     
         }
 
         private Bevetel _selectedbevetel;
@@ -79,9 +110,7 @@ namespace Raktar.ViewModels
                 NotifyOfPropertyChange(() => Sum);
             }
         }
-        public void CloseWindow() {
-            TryClose(true);
-        }
+
 
     }
 }

@@ -55,7 +55,10 @@ namespace Raktar.ViewModels
             ActivateItem(sceneFactory.CreateScene(3));
             CurrentMenu = "Dolgozók";
         }
-
+        public void Intakes() {
+            ActivateItem(sceneFactory.CreateScene(6));
+            CurrentMenu = "Bevételezések";
+        }
         public void MainPage()
         {
             ActivateItem(sceneFactory.CreateScene(0));

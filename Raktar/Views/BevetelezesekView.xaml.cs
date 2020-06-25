@@ -17,16 +17,12 @@ namespace Raktar.Views
     /// <summary>
     /// Interaction logic for BevetelezesekView.xaml
     /// </summary>
-    public partial class BevetelezesekView : Window
+    public partial class BevetelezesekView : UserControl
     {
         public BevetelezesekView()
         {
             InitializeComponent();
         }
 
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
     }
 }

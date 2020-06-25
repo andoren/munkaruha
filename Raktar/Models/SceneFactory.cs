@@ -47,7 +47,11 @@ namespace Raktar.Models
                         scene = new ListDolgozoPrintByGroupViewModel();
                         break;
                     }
-
+                case 6:
+                    {
+                        scene = new BevetelezesekViewModel();
+                        break;
+                    }
                 default:
                     break;
             }
