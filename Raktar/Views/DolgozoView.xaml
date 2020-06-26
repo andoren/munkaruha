@@ -28,8 +28,8 @@
             </StackPanel>
         </StackPanel>
 
-        <ScrollViewer Grid.Row="1" >
-            <DataGrid HorizontalScrollBarVisibility="Auto" x:Name="Ruhak" Grid.Row="2" Grid.RowSpan="2" FontSize="16" IsReadOnly="True" Cursor="Hand" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single" >
+
+            <DataGrid Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" x:Name="Ruhak"  FontSize="16" IsReadOnly="True" Cursor="Hand" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Cikkszam}" Width="*" Header="Cikkszám" ></DataGridTextColumn>
                     <DataGridTextColumn Binding="{Binding Cikknev}" Width="*" Header="Cikknév"></DataGridTextColumn>
@@ -43,10 +43,10 @@
                 </DataGrid.Columns>
             </DataGrid>
 
-        </ScrollViewer>
-        <StackPanel  Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
-            <TextBlock> Összsen:</TextBlock>
-            <TextBlock x:Name="Sum" FontWeight="Bold" Text="{Binding Sum, StringFormat='c0', ConverterCulture=hu-HU}" Margin="10,0,20,0">0 Ft</TextBlock>
+
+        <StackPanel Margin="0 5" Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <TextBlock> Összesen:</TextBlock>
+            <TextBlock x:Name="Sum" FontWeight="Bold" Text="{Binding Sum, StringFormat='c0', ConverterCulture=hu-HU}" Margin="10,0,0,0">0 Ft</TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>

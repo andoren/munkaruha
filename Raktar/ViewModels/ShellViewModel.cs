@@ -12,7 +12,7 @@ using Raktar.Views;
 
 namespace Raktar.ViewModels
 {
-    class ShellViewModel:Conductor<Screen>
+    class ShellViewModel : Conductor<Screen>
     {
         public ShellViewModel()
         {
@@ -25,6 +25,10 @@ namespace Raktar.ViewModels
         public void Kilepes()
         {
             TryClose();
+        }
+        public void MainExit()
+        {
+            Kilepes();
         }
         public void Kicsinyito(object View) {
             if (View is Window) {
@@ -85,8 +89,29 @@ namespace Raktar.ViewModels
                 NotifyOfPropertyChange(() => CurrentMenu);
             }
         }
+        private string _loadingText = "Temp text";
 
+        public string LoadingText
+        {
+            get { return _loadingText; }
+            set { _loadingText = value;
+                NotifyOfPropertyChange(()=>LoadingText);
+            }
+        }
 
+        private bool _loadingBarIsVisible = false;
+
+        public bool LoadingBarIsVisible
+        {
+            get { return _loadingBarIsVisible; }
+            set { _loadingBarIsVisible = value;
+                NotifyOfPropertyChange(()=>LoadingBarIsVisible);
+            }
+        }
+
+        public static void SetLoader(bool isLoading = true,string action = ""){
+
+        }
 
         public string CurrentVersion
         {

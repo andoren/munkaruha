@@ -53,7 +53,7 @@ namespace Raktar.ViewModels
 
         }
 
-        public void Close() {
+        public void Exit() {
             TryClose(false);
         }
         public void ExecuteFilterView(ActionExecutionContext context)

@@ -62,18 +62,17 @@
                     </TextBox>
 
                     <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Partner:</TextBlock>
-                    <ComboBox x:Name="Partnerek" Margin="5,0,5,0" Height="25" Width="100" DisplayMemberPath="Name" SelectedItem="{Binding Partner}">
+                    <ComboBox  IsEnabled="{Binding Path=SzamlaSzamIsEnabled}" x:Name="Partnerek" Margin="5,0,5,0" Height="25" Width="100" DisplayMemberPath="Name" SelectedItem="{Binding Partner}">
                     </ComboBox>
                     <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Számlaszám:</TextBlock>
 
-                    <TextBox Style="{StaticResource DesignedTextBox}" Width="100"  VerticalAlignment="Center" x:Name="Szamlaszam"></TextBox>
+                    <TextBox Style="{StaticResource DesignedTextBox}" IsEnabled="{Binding Path=SzamlaSzamIsEnabled}" Width="100"  VerticalAlignment="Center" x:Name="Szamlaszam"></TextBox>
 
                     <Button x:Name="AddCikkToGrid" Margin="5"  >Cikk hozzáadása</Button>
                 </StackPanel>
             </StackPanel>
-            <ScrollViewer Margin="5" Grid.Row="1">
-
-                <DataGrid x:Name="Ruhak" cal:Message.Attach="[Event CurrentCellChanged] = [Action CellEdited] " Cursor="Hand" CanUserAddRows="False" CanUserDeleteRows="True"  AutoGenerateColumns="False"   AlternationCount="1" SelectionMode="Single">
+ 
+                <DataGrid Margin="5" VerticalScrollBarVisibility="Auto" Grid.Row="1" x:Name="Ruhak" cal:Message.Attach="[Event CurrentCellChanged] = [Action CellEdited] " Cursor="Hand" CanUserAddRows="False" CanUserDeleteRows="True"  AutoGenerateColumns="False"   AlternationCount="1" SelectionMode="Single">
                     <DataGrid.Columns>
                         <DataGridTextColumn Width="*" Header="Cikkszám" Binding="{Binding Path=Cikkszam}"></DataGridTextColumn>
                         <DataGridTextColumn Width="*" Header="Cikknév" Binding="{Binding Path=Cikknev}"></DataGridTextColumn>
@@ -85,7 +84,7 @@
 
                     </DataGrid.Columns>
                 </DataGrid>
-            </ScrollViewer>
+
             <StackPanel Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
                 <TextBlock> Összsen:</TextBlock>
                 <TextBlock FontWeight="Bold" Text="{Binding Sum, StringFormat='c0', ConverterCulture=hu-HU}" Margin="10,0,20,0"></TextBlock>

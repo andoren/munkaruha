@@ -28,6 +28,7 @@
                         
                     </RowDefinition>
                     <RowDefinition Height="60"></RowDefinition>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -41,31 +42,10 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Button Margin=" 5 0 0 0" Grid.Column="0" Grid.Row="1" x:Name="MainPage"  >
-                        Főoldal
-                    </Button>
-                <Button Grid.Column="1" Grid.Row="1" x:Name="Torzs"  >
-                        Törzs
-                    </Button>
-                <Button Grid.Column="2" Grid.Row="1" x:Name="Warehouse"  >
-                        Raktár
-                    </Button>
-                <Button Grid.Column="3" Grid.Row="1" x:Name="Intake"  >
-                        Bevételezés
-                    </Button>
-                <Button Grid.Column="4" Grid.Row="1" x:Name="Intakes" >
-                        Bevételezések
-                    </Button>
-                <Button Grid.Column="5" Grid.Row="1" x:Name="ItemToWorker"  >
-                        Kiadás
-                    </Button>
-                <Button Grid.Column="6" Grid.Row="1" x:Name="Worker"  >
-                      Dolgozói cikkek
-                    </Button>
-                <Button Margin=" 0 0 5 0" Grid.Column="7" Grid.Row="1" x:Name="Lists" >
-                        Listák
-                    </Button>
-      
+                <StackPanel Margin="10 5" VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+                    <Image VerticalAlignment="Center" Height="28" Width="28" Source="/Raktar;component/apron.ico" ></Image>
+                    <TextBlock Margin="5" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="#FF35679F"  >Munkaruha</TextBlock>
+                </StackPanel>
                 <StackPanel Margin="0,5,5,0" Grid.Column="8"  Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button  Style="{StaticResource ownButton}" Margin="0" Padding="0"  x:Name="Kicsinyito" Width="30" Height="30" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Top" >
                         <Image Width="30" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Raktar;component/Pictrures/minimize.png" Stretch="Fill"></Image>
@@ -87,7 +67,32 @@
                         <Image Width="30" Height="30" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Raktar;component/Pictrures/clos.png" Stretch="Fill"></Image>
                     </Button>
                 </StackPanel>
+                <Button Margin=" 5 0 0 0" Grid.Column="0" Grid.Row="1" x:Name="MainPage"  >
+                    Főoldal
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" x:Name="Torzs"  >
+                    Törzs
+                </Button>
+                <Button Grid.Column="2" Grid.Row="1" x:Name="Warehouse"  >
+                    Raktár
+                </Button>
 
+                <Button Grid.Column="3" Grid.Row="1" x:Name="Intakes" >
+                    Bevételezések
+                </Button>
+                <Button Grid.Column="4" Grid.Row="1" x:Name="ItemToWorker"  >
+                    Kiadás
+                </Button>
+                <Button Grid.Column="5" Grid.Row="1" x:Name="Worker"  >
+                    Dolgozói cikkek
+                </Button>
+                <Button  Grid.Column="6" Grid.Row="1" x:Name="Lists" >
+                    Listák
+                </Button>
+                <Button Margin=" 0 0 5 0" Grid.Column="7" Grid.Row="1" x:Name="MainExit" >
+                    Kilépés
+                </Button>
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="8" Background="LightGray" Height="2" Margin="30 10 30 0"/>
             </Grid>
             <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
                 <Grid.RowDefinitions>
@@ -104,6 +109,7 @@
                 <Grid  Background="#2868b0" Height="20" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Orientation="Horizontal">
@@ -111,7 +117,13 @@
                             <TextBlock Foreground="White" Margin="5,0,5,0" x:Name="CurrentMenu"> Főoldal</TextBlock>
 
                         </StackPanel>
+                    <!-- Majd egyszer TODO
                         <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <ProgressBar x:Name="LoadingBarIsVisible" Margin="1" Width="200" IsIndeterminate="True"></ProgressBar>
+                            <TextBlock x:Name="LoadingText" Foreground="White" Margin="5,0,5,0"></TextBlock>
+                        </StackPanel>
+                    -->
+                        <StackPanel Orientation="Horizontal" Grid.Column="2">
                             <TextBlock Margin="0,0,5,0"  Foreground="White">Készítette: Pekár Mihály</TextBlock>
                             <TextBlock Foreground="White" Margin="5,0,5,0" >Verzió:</TextBlock>
                             <TextBlock Foreground="White" Margin="5,0,5,0" x:Name="CurrentVersion"></TextBlock>

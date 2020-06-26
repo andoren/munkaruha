@@ -49,7 +49,26 @@ namespace Raktar.ViewModels
                 
             }
         }
+        private bool _szamlaSzamIsEnabled =true;
 
+        public bool SzamlaSzamIsEnabled
+        {
+            get { return _szamlaSzamIsEnabled; }
+            set { _szamlaSzamIsEnabled = value;
+                NotifyOfPropertyChange(()=>SzamlaSzamIsEnabled);
+            }
+        }
+        private bool _partnerIsEnabled = true;
+
+        public bool PartnerIsEnabled
+        {
+            get { return _partnerIsEnabled; }
+            set
+            {
+                _partnerIsEnabled = value;
+                NotifyOfPropertyChange(() => PartnerIsEnabled);
+            }
+        }
         #region Variables for new munkaruha
         private int _id;
 
@@ -69,6 +88,7 @@ namespace Raktar.ViewModels
             set {
                 _number = value;
                 NotifyOfPropertyChange(() => Number);
+                NotifyOfPropertyChange(() => CanAddCikkToGrid);
             }
         }
 
@@ -80,6 +100,7 @@ namespace Raktar.ViewModels
             set {
                 _name = value;
                 NotifyOfPropertyChange(() => Nev);
+                NotifyOfPropertyChange(() => CanAddCikkToGrid);
             }
         }
         private string _count;
@@ -90,6 +111,7 @@ namespace Raktar.ViewModels
             set {
                 _count = value;
                 NotifyOfPropertyChange(() => Count);
+                NotifyOfPropertyChange(() => CanAddCikkToGrid);
             }
         }
         private string _unit;
@@ -100,6 +122,7 @@ namespace Raktar.ViewModels
             set {
                 _unit = value;
                 NotifyOfPropertyChange(() => Unit);
+                NotifyOfPropertyChange(() => CanAddCikkToGrid);
             }
         }
 
@@ -110,6 +133,7 @@ namespace Raktar.ViewModels
             get { return _price; }
             set { _price = value;
                 NotifyOfPropertyChange(() => Price);
+                NotifyOfPropertyChange(() => CanAddCikkToGrid);
             }
         }
 
@@ -119,14 +143,19 @@ namespace Raktar.ViewModels
         public Partner Partner
         {
             get { return _partner; }
-            set { _partner = value; }
+            set { _partner = value;
+                NotifyOfPropertyChange(() => CanAddCikkToGrid);
+            }
         }
         private string _szamlaszam;
 
         public string Szamlaszam
         {
             get { return _szamlaszam; }
-            set { _szamlaszam = value; }
+            set {
+                _szamlaszam = value;
+                NotifyOfPropertyChange(() => CanAddCikkToGrid);
+            }
         }
 
         #endregion
@@ -187,35 +216,113 @@ namespace Raktar.ViewModels
             TryClose(false);
         }
 
-        public void CikkHasBeenChoosen(Munkaruha munkaruha)
-        {
-
-        }
         public void AddCikkToGrid()
         {
-            //string temp = this.Price.Remove(this.Price.Length - 3, 3).Replace(" ", string.Empty);
-            //temp = Regex.Replace(temp, @"\s", "");
-            int Price = int.Parse(this.Price);
-            if (Count == null || Count == string.Empty || int.Parse(Count) < 1) {
-                MessageBox.Show("Hibás mennyiség!");
-                return;
-            }
-            if (this.Price == null || this.Price == string.Empty || Price < 1) {
-                MessageBox.Show("Hibás egységár!");
-                return;
-            }
-            
-            if (Partner == null) {
-                MessageBox.Show("Nincs partner kiválasztva !");
+            if (!CheckAllData()) {
                 return;
             } 
-            var ruha = new Munkaruha() {Cikkszam = Number, Mennyiseg = int.Parse(Count), Id = this.Id, Mertekegyseg = Unit, Cikknev = Nev, Egysegar = Price, Partner = Partner.Name, PartnerId = Partner.Id, Szamlaszam = this.Szamlaszam };
+            int Price = int.Parse(this.Price);
+            int Count = int.Parse(this.Count); 
+            var ruha = new Munkaruha() {Cikkszam = Number, Mennyiseg = Count, Id = this.Id, Mertekegyseg = Unit, Cikknev = Nev, Egysegar = Price, Partner = Partner.Name, PartnerId = Partner.Id, Szamlaszam = this.Szamlaszam };
             Ruhak.Add(ruha);
-            Number = string.Empty; Count = string.Empty; Unit = string.Empty; Nev = string.Empty; this.Price = string.Empty;
+            Number = string.Empty; this.Count = string.Empty; Unit = string.Empty; Nev = string.Empty; this.Price = string.Empty;
             NotifyOfPropertyChange(() => Ruhak);
             NotifyOfPropertyChange(() => Sum);
+            SzamlaSzamIsEnabled = false;
+            PartnerIsEnabled = false;
         }
 
+        public bool CanAddCikkToGrid
+        {
+            get {             
+                return CheckAllData();
+            }
+           
+        }
+
+        private bool CheckAllData() {
+            return CheckCikkszam() && CheckCount() && CheckPrice()  && CheckPartner() && CheckSzamlaSzam();
+        }
+        private bool CheckPrice() {
+            if (string.IsNullOrEmpty(this.Price) || string.IsNullOrWhiteSpace(this.Price))
+            {
+               
+                return false;
+            }
+            int Price;
+            try
+            {
+                Price = int.Parse(this.Price);
+            }
+            catch (FormatException)
+            {
+              
+                return false;
+            }
+            catch (Exception)
+            {
+             
+                return false;
+            }
+
+            if (Price < 1)
+            {
+              
+                return false;
+            }
+
+            return true;
+        }
+        private bool CheckCount() {
+            if (string.IsNullOrEmpty(this.Count) || string.IsNullOrWhiteSpace(this.Count))
+            {
+              
+                return false;
+            }
+            int Count;
+            try
+            {
+                Count = int.Parse(this.Count);
+            }
+            catch (FormatException)
+            {
+               
+                return false;
+            }
+            catch (Exception)
+            {
+            
+                return false;
+            }
+
+            if (Count < 1)
+            {
+               
+                return false ;
+            }
+            return true;
+        }
+        private bool CheckSzamlaSzam() {
+            bool result;
+            result = !string.IsNullOrEmpty(Szamlaszam) && !string.IsNullOrWhiteSpace(Szamlaszam); ;
+         
+            return result;
+        }
+        private bool CheckCikkszam()
+        {
+            bool result;
+            result = !string.IsNullOrEmpty(Number) && !string.IsNullOrWhiteSpace(Number); ;
+       
+            return result;
+          
+        }
+        private bool CheckPartner() {
+            bool result;
+            result = Partner != null;
+        
+            return result;
+
+        }
         public void SetCikk(Munkaruha ruha)
         {
             Nev = ruha.Cikknev;
