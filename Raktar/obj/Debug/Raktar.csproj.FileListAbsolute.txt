@@ -90,6 +90,9 @@ E:\Repos\Munkaruha\Raktar\bin\Debug\Caliburn.Micro.Platform.xml
 E:\Repos\Munkaruha\Raktar\bin\Debug\Caliburn.Micro.Platform.Core.xml
 E:\Repos\Munkaruha\Raktar\bin\Debug\Google.Protobuf.xml
 E:\Repos\Munkaruha\Raktar\bin\Debug\MySql.Data.xml
+E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csprojAssemblyReference.cache
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\BevetelezesekView.baml
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ShellView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyCikkView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyCsoportView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyDolgozoView.g.cs
@@ -103,6 +106,7 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\DolgozoKivalasztView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\DolgozokView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\DolgozoView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\FooldalView.g.cs
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KiadFullView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KiadWindowView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KivezetesView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ListakView.g.cs
@@ -128,7 +132,6 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyCsoportView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyDolgozoView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyOsztalyView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyPartnerView.baml
-E:\Repos\Munkaruha\Raktar\obj\Debug\Views\BevetelezesekView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\BevWindowView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\CikkekTorzsView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\CikkekView.baml
@@ -136,6 +139,7 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\DolgozoKivalasztView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\DolgozokView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\DolgozoView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\FooldalView.baml
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KiadFullView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KiadWindowView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\KivezetesView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ListakView.baml
@@ -147,7 +151,6 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PopUpView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintingWindowView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintOsztalyView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\RaktarView.baml
-E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ShellView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\TorzsView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\VisszavetView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.g.resources
@@ -159,4 +162,3 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.application
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csproj.CopyComplete
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.exe
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.pdb
-E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csprojAssemblyReference.cache

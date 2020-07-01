@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
 using Raktar.Models;
+using Raktar.Models.Database;
 using Raktar.Views;
 
 namespace Raktar.ViewModels
@@ -19,8 +20,20 @@ namespace Raktar.ViewModels
 
             ActivateItem(sceneFactory.CreateScene(0));
             CurrentMenu = "Főoldal";
+            CheckAndExecuteEndings();
         }
-
+        private  async void CheckAndExecuteEndings() {
+            DolgozoDatabaseHelper helper = new DolgozoDatabaseHelper();
+            CheckedData data = await helper.CheckCloths();
+            MessageBoxResult result = MessageBoxResult.Cancel;
+            if (data.DolgozoCount > 0) {
+                result = MessageBox.Show($"Összesen: {data.DolgozoCount} dolgozónál találtam lejárt ruhát. A ruhák száma: {data.ClothesCount}{Environment.NewLine}Szeretné, hogy töröljem őket?","Lejárt ruhák",MessageBoxButton.OKCancel,MessageBoxImage.Asterisk);
+            }
+            if (MessageBoxResult.OK == result) {
+                await helper.DeleteEndings();
+                MessageBox.Show("A lejárt ruhákat kivezettem!");
+            }
+        }
         SceneFactory sceneFactory = new SceneFactory();
         public void Kilepes()
         {
@@ -78,6 +91,11 @@ namespace Raktar.ViewModels
         {
             ActivateItem(sceneFactory.CreateScene(4));
             CurrentMenu = "Listák";
+        }
+        public void ItemToWorker()
+        {
+            ActivateItem(sceneFactory.CreateScene(7));
+            CurrentMenu = "Kiadás";
         }
         private string _currentMenu;
 

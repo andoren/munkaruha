@@ -15,16 +15,17 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <StackPanel Margin="0,5,5,5" Orientation="Horizontal">
-                <Button x:Name="KivalasztDolgozo" VerticalAlignment="Center" HorizontalAlignment="Left"   >Dolgozó kiválasztása</Button>
+                <Button Height="50" x:Name="KivalasztDolgozo" VerticalAlignment="Center" HorizontalAlignment="Left"   >Dolgozó kiválasztása</Button>
                 <TextBlock VerticalAlignment="Center"  Margin="5,5,0,5">Kiválasztott dolgozó:</TextBlock>
                 <TextBlock  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="WorkerName" Margin="5,0,0,0"> </TextBlock>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5,0,0,0">-</TextBlock>
                 <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="WorkerGroup" Margin="5,0,0,0"></TextBlock>
             </StackPanel>
-            <StackPanel IsEnabled="{Binding DolgozoKivalasztva}"  Orientation="Horizontal">
-                <Button x:Name="Visszavet"  Margin="0,0,10,5" >Visszavétel</Button>
-                <Button x:Name="Kivezetes"  Margin="0,0,10,5">Kivezetés</Button>
-                <Button x:Name="Nyomtatas"  Margin="0,0,10,5">Nyomtatási kép</Button>
+            <StackPanel IsEnabled="{Binding DolgozoKivalasztva}" Margin="0 0 0 5" Orientation="Horizontal">
+                <Button x:Name="Visszavet" Width="100" Height="50" >Visszavétel</Button>
+                <Button x:Name="Kivezetes"  Width="100" Height="50" >Kivezetés</Button>
+                <Button x:Name="Megvaltas"  Width="100" Height="50" > Megváltás</Button>
+                <Button x:Name="Nyomtatas"  Width="100" Height="50" >Nyomtatás</Button>
             </StackPanel>
         </StackPanel>
 

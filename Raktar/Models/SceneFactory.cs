@@ -52,6 +52,10 @@ namespace Raktar.Models
                         scene = new BevetelezesekViewModel();
                         break;
                     }
+                case 7: {
+                        scene = new KiadFullViewModel();
+                        break;
+                    }
                 default:
                     break;
             }

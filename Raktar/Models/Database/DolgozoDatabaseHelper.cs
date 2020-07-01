@@ -43,10 +43,62 @@ namespace Raktar.Models.Database
             return dolgozok;
         }
 
-        internal BindableCollection<Dolgozo> GetDolgozokByOsztaly(string osztaly)
-        {
-            throw new NotImplementedException();
+
+        public async Task DeleteEndings() {
+            MySqlCommand command = new MySqlCommand();
+            MySqlConnection connection = getConnection();
+            command.Connection = connection;
+            command.CommandText = "DeleteEndings";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            try
+            {
+                OpenConnection(connection);
+                await command.ExecuteNonQueryAsync();
+            }
+            catch (Exception e)
+            {
+                Logger.Log(e.Message);
+            }
+            finally
+            {
+                CloseConnection(connection);
+            }
         }
+        public async Task<CheckedData> CheckCloths()
+        {
+            await Task.Delay(3000);
+            MySqlCommand command = new MySqlCommand();
+            MySqlConnection connection = getConnection();
+            command.Connection = connection;
+            command.CommandText = "CheckLejarat";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            CheckedData data = new CheckedData(0,0);
+            try
+            {
+                OpenConnection(connection);
+                MySqlDataReader reader = (MySqlDataReader)await command.ExecuteReaderAsync();
+                while (reader.Read())
+                {
+                    if (reader.HasRows)
+                    {
+                        data = new CheckedData(int.Parse(reader["ember"].ToString()), int.Parse(reader["cikk"].ToString()));
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                return data;
+            }
+            finally
+            {
+                CloseConnection(connection);
+            }
+            return data;
+
+
+        }
+
 
         public bool AddDolgozo(string newName, Osztaly group)
         {

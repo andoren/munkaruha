@@ -21,7 +21,7 @@ namespace Raktar.ViewModels
 
             Cikkek = new BindableCollection<Munkaruha>();
             var dbhelper = new MunkaruhaDatabaseHelper();
-            if (window is KiadWindowViewModel)
+            if (window is KiadWindowViewModel || window is KiadFullViewModel)
             {
                 foreach (var cikk in dbhelper.GetRuhakFromRaktar())
                 {

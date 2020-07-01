@@ -133,6 +133,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Bevetel.cs" />
+    <Compile Include="Models\CheckedData.cs" />
     <Compile Include="Models\Csoport.cs" />
     <Compile Include="Models\Database\Abstract\DatabaseHelper.cs" />
     <Compile Include="Models\Database\DolgozoDatabaseHelper.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="ViewModels\DolgozoViewModel.cs" />
     <Compile Include="ViewModels\FooldalViewModel.cs" />
     <Compile Include="Models\Partner.cs" />
+    <Compile Include="ViewModels\KiadFullViewModel.cs" />
     <Compile Include="ViewModels\KiadWindowViewModel.cs" />
     <Compile Include="ViewModels\KivezetesViewModel.cs" />
     <Compile Include="ViewModels\ListakViewModel.cs" />
@@ -215,6 +217,9 @@
     </Compile>
     <Compile Include="Views\FooldalView.xaml.cs">
       <DependentUpon>FooldalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KiadFullView.xaml.cs">
+      <DependentUpon>KiadFullView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\KiadWindowView.xaml.cs">
       <DependentUpon>KiadWindowView.xaml</DependentUpon>
@@ -357,6 +362,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FooldalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KiadFullView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

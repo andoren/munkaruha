@@ -49,7 +49,10 @@ namespace Raktar.Models
             get { return ruhaim; }
             set { ruhaim = value; }
         }
-
+        public string WorkerNameWithGroup { get {
+                return $"{Name}-{GroupName}";
+            } 
+        }
 
     }
 }
