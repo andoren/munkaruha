@@ -111,20 +111,12 @@ namespace Raktar.ViewModels
         }
         public void PrintAll()
         {
-            PrintDialog pd = new PrintDialog();
-            pd.UserPageRangeEnabled = true;
-            if (pd.ShowDialog() != true) return;
-            Application.Current.Dispatcher.Invoke(()=> {
-                pd.PrintTicket.PageMediaSize = new PageMediaSize(PageMediaSizeName.ISOA4); ;
-                Document.PageWidth = PrintLayout.A4.Size.Width;
-                Document.PageHeight = PrintLayout.A4.Size.Height;
-                Document.PagePadding = PrintLayout.A4.Margin;
-                Document.ColumnWidth = PrintLayout.A4.ColumnWidth;
-                IDocumentPaginatorSource idocument = Document as IDocumentPaginatorSource;
 
-                pd.PrintDocument(idocument.DocumentPaginator, string.Format("{0} osztály nyomtatása",OsztalyName));
-            });
-
+            Document.PageWidth = PrintLayout.A4.Size.Width;
+            Document.PageHeight = PrintLayout.A4.Size.Height;
+            Document.PagePadding = PrintLayout.A4.Margin;
+            Document.ColumnWidth = PrintLayout.A4.ColumnWidth;
+            PrintHelper.PrintXPS(Document);
 
         }
         public void CreateFlowDocument() {

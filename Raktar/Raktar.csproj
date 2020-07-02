@@ -267,6 +267,7 @@
     <Compile Include="Views\VisszavetView.xaml.cs">
       <DependentUpon>VisszavetView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PrintHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

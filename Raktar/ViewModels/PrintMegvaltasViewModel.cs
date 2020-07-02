@@ -90,16 +90,12 @@ namespace Raktar.ViewModels
         }
         public void Print(FlowDocument Document)
         {
-            PrintDialog pd = new PrintDialog();
-            pd.UserPageRangeEnabled = true;
-            if (pd.ShowDialog() != true) return;
-            pd.PrintTicket.PageMediaSize = new PageMediaSize(PageMediaSizeName.ISOA4); ;
+
             Document.PageWidth = PrintLayout.A4.Size.Width;
             Document.PageHeight = PrintLayout.A4.Size.Height;
             Document.PagePadding = PrintLayout.A4.Margin;
             Document.ColumnWidth = PrintLayout.A4.ColumnWidth;
-            IDocumentPaginatorSource idocument = Document as IDocumentPaginatorSource;
-            pd.PrintDocument(idocument.DocumentPaginator, "Printing Flow Document...");
+            PrintHelper.PrintXPS(Document);
             var result = MessageBox.Show("Szeretné kivezetni a dolgozóról a cikkekekt? (Akkor ajánlott ha már kifizette)","Törlés",MessageBoxButton.YesNo,MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes) {
                 MunkaruhaDatabaseHelper helper = new MunkaruhaDatabaseHelper();

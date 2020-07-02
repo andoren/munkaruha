@@ -279,13 +279,6 @@ namespace Raktar.ViewModels
             MessageBox.Show($"Cikk(ek) kiadva {Dolgozo.Name} számára.");
             TryClose(true);
         }
-        private void Reset()
-        {
-            Partner = "";
-            Ruhak = new BindableCollection<Munkaruha>();
-            Dolgozo = new Dolgozo();
-
-        }
         public void Exit()
         {
             TryClose(false);
