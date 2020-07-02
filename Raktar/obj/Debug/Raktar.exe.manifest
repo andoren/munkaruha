@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Raktar.exe" size="685520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Raktar.exe" size="694224">
       <assemblyIdentity name="Raktar" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>y4sXdXvnRE0fqzKWxDepcJwulgy0SQMZWShJw6G7Q5Y=</dsig:DigestValue>
+        <dsig:DigestValue>LVPLUmXi63ij03UAXuBNf2VNHDK5AlY7Kfe+ABDFCi0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

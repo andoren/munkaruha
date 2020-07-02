@@ -251,9 +251,9 @@ namespace Raktar.Models.Database
                         Mertekegyseg = reader["unit"].ToString(),
                         Egysegar = int.Parse(reader["price"].ToString()),
                         Hasznalt = int.Parse(reader["used"].ToString()) == 0 ? false : true,
-                        Partner = reader["partner"].ToString()
+                        Partner = reader["partner"].ToString(),
+                        KiadDatum = reader["date"].ToString(),
 
-                        
                     });
                 }
             }

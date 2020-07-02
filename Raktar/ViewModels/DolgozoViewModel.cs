@@ -136,20 +136,40 @@ namespace Raktar.ViewModels
         }
         public void Nyomtatas() {
 
-            if (Dolgozo != null)
+            if (Dolgozo != null )
             {
                 var printview = new PrintingWindowViewModel(Dolgozo, Ruhak);
                 var manager = new WindowManager();
-                var result = manager.ShowDialog(printview, null, null);
-                if (result == true)
-                {
-                    
-                }
+                manager.ShowDialog(printview, null, null);
+
             }
 
             else
                 Logger.Log("Nincs dolgozó kiválasztva!");
 
         }
+        public void Megvaltas() {
+            if (Dolgozo != null && Dolgozo.GroupName.ToLower() != "fejlesztő") {
+                var result = MessageBox.Show("A megváltás előtt a nem megváltandó ruhákat, eszközöket ki kell vezetni vagy visszavételezni.","Megváltás",MessageBoxButton.OKCancel,MessageBoxImage.Warning);
+                if (result == MessageBoxResult.OK) {
+                    var printview = new PrintMegvaltasViewModel(Dolgozo, Ruhak);
+                    var manager = new WindowManager();
+                    var isDeleted = manager.ShowDialog(printview, null, null);
+                    if ((bool)isDeleted) {
+                        GetRuhakByDolgozoId(Dolgozo.Id);
+                    }
+                }
+          
+            }
+            else
+            {
+                if (Dolgozo == null)
+                    Logger.Log("Nincs dolgozó kiválasztva!");
+                else {
+                    Logger.Log("Fejlesztőben nincs megváltás!");
+                }
+            }
+        }
     }
+    
 }

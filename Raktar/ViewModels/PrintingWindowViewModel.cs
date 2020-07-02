@@ -51,7 +51,7 @@ namespace Raktar.ViewModels
             set { dolgozo = value; }
         }
 
-        private FlowDocument _document;
+    
         private BindableCollection<Munkaruha> ruhak;
         public BindableCollection<Munkaruha> Ruhak {
             get {
@@ -62,6 +62,7 @@ namespace Raktar.ViewModels
                 NotifyOfPropertyChange(()=> Ruhak);
             }
         }
+        private FlowDocument _document;
         public FlowDocument Document
         {
             get { return _document; }

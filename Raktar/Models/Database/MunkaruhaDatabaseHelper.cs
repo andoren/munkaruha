@@ -135,6 +135,27 @@ namespace Raktar.Models.Database
             return ruhak;
         }
 
+        public bool MegvaltRuhakByDolgozoID(int id)
+        {
+            MySqlCommand command = new MySqlCommand();
+            MySqlConnection connection = getConnection();
+            command.Connection = connection;
+            command.CommandText = "TorolDolgozCikkek";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("did", id);
+            bool result = false;
+            try
+            {
+                OpenConnection(connection);
+                result = command.ExecuteNonQuery() == 0 ? false : true;
+            }
+            catch (Exception e) {
+                
+                Logger.Log(e.Message);
+            }
+            return result;
+        }
+
         public BindableCollection<Bevetel> GetDistinctBevet()
         {
             MySqlCommand command = new MySqlCommand();
