@@ -90,7 +90,6 @@ E:\Repos\Munkaruha\Raktar\bin\Debug\Caliburn.Micro.Platform.xml
 E:\Repos\Munkaruha\Raktar\bin\Debug\Caliburn.Micro.Platform.Core.xml
 E:\Repos\Munkaruha\Raktar\bin\Debug\Google.Protobuf.xml
 E:\Repos\Munkaruha\Raktar\bin\Debug\MySql.Data.xml
-E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csprojAssemblyReference.cache
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\BevetelezesekView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ShellView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\AddAndModifyCikkView.g.cs
@@ -116,6 +115,7 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\OsztalyokView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PartnerekView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PopUpView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintingWindowView.g.cs
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintMegvaltasView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintOsztalyView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\RaktarView.g.cs
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\ShellView.g.cs
@@ -149,6 +149,7 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Views\OsztalyokView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PartnerekView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PopUpView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintingWindowView.baml
+E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintMegvaltasView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintOsztalyView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\RaktarView.baml
 E:\Repos\Munkaruha\Raktar\obj\Debug\Views\TorzsView.baml
@@ -162,5 +163,3 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.application
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csproj.CopyComplete
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.exe
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.pdb
-E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintMegvaltasView.g.cs
-E:\Repos\Munkaruha\Raktar\obj\Debug\Views\PrintMegvaltasView.baml

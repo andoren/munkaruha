@@ -386,6 +386,7 @@ namespace Raktar.Models.Database
                 foreach (var ruha in ruhak)
                 {
                     command.Parameters.Clear();
+                    
                     MySqlParameter raktarid = new MySqlParameter()
                     {
                         Value = ruha.Id,
@@ -407,9 +408,17 @@ namespace Raktar.Models.Database
                         Direction = System.Data.ParameterDirection.Input,
                         ParameterName = "v_emberid"
                     };
+                    MySqlParameter kiad_date = new MySqlParameter
+                    {
+                        Value = DateTime.Parse(ruha.KiadDatum),
+                        DbType = System.Data.DbType.DateTime,
+                        Direction = System.Data.ParameterDirection.Input,
+                        ParameterName = "kiad_date"
+                    };
                     command.Parameters.Add(raktarid);
                     command.Parameters.Add(mennyiseg);
                     command.Parameters.Add(v_emberid);
+                    command.Parameters.Add(kiad_date);
                     success = command.ExecuteNonQuery() == 0?false:true;
                 }
                 

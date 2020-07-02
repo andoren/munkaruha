@@ -46,7 +46,7 @@
 
                             <TextBox Style="{StaticResource DesignedTextBox}" IsReadOnly="True" Grid.Column="3"  ToolTip="{Binding CikkName }" FontWeight="Bold" x:Name="CikkName"  Margin="5,0,5,0" VerticalAlignment="Center"></TextBox>
 
-                            <TextBlock Grid.Column="4"  Margin="5,0,5,0" VerticalAlignment="Center">Mennyiség</TextBlock>
+                            <TextBlock Grid.Column="4"  Margin="5,0,5,0" VerticalAlignment="Center">Mennyiség:</TextBlock>
 
                             <TextBox Style="{StaticResource DesignedTextBox}" Grid.Column="5"  x:Name="Count"  Margin="5,0,5,0" HorizontalContentAlignment="Center" VerticalAlignment="Center">
                                 0</TextBox>
@@ -67,7 +67,7 @@
                                 <ColumnDefinition Width="auto"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="1.5*"/>
                                 <ColumnDefinition Width="3*"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock  Width="60" Margin="5,0,5,0" VerticalAlignment="Center"> Egységár:
@@ -79,7 +79,9 @@
                             <TextBlock Grid.Column="2" Margin="5,0,5,0" VerticalAlignment="Center">Partner:</TextBlock>
                             <TextBox Style="{StaticResource DesignedTextBox}" Grid.Column="3" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" FontWeight="Bold" x:Name="Partner" VerticalAlignment="Center" Margin="5,0,5,0"  >
                             </TextBox>
-                            <Button Grid.Column="4" x:Name="AddCikkToGrid" Margin="5" Height="40" >Cikk hozzáadása</Button>
+                            <TextBlock  Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="4">Kiadás dátuma:</TextBlock>
+                            <DatePicker x:Name="KiadDate" Grid.Column="5"  VerticalAlignment="Center"></DatePicker>
+                            <Button Grid.Column="6" x:Name="AddCikkToGrid" Margin="5" Height="40" >Cikk hozzáadása</Button>
                         </Grid>
                     </StackPanel>
 
@@ -100,7 +102,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </ScrollViewer>
-        <Button Width="100" Height="40" Style="{StaticResource AddButton}" HorizontalAlignment="Left" Grid.Row="2"  x:Name="Save" >
+        <Button Padding="15 10" Margin="5 0 0 5" Background="Green" Foreground="White" BorderBrush="LightGreen" BorderThickness=".5"  Style="{x:Null}"  HorizontalAlignment="Left" Grid.Row="2"  x:Name="Save" >
             Mentés
         </Button>
         <StackPanel Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >

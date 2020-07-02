@@ -17,30 +17,7 @@ namespace Raktar.ViewModels
             Ruhak = new BindableCollection<Munkaruha>();
             //GetPartners();
         }
-        #region Partnerek
-        //private void GetPartners()
-        //{
-        //    BindableCollection<Partner> temp = new BindableCollection<Partner>();
-        //    PartnerHelper helper = new PartnerHelper();
-        //    foreach (Partner partner in helper.GetPartners())
-        //    {
-        //        temp.Add(partner);
-        //    }
-        //    Partnerek = temp;
-        //}
-        //private BindableCollection<Partner> _partnerek;
 
-        //public BindableCollection<Partner> Partnerek
-        //{
-        //    get { return _partnerek; }
-        //    set
-        //    {
-        //        _partnerek = value;
-        //        NotifyOfPropertyChange(() => Partnerek);
-        //    }
-        //}
-
-        #endregion
         #region Dolgozó
         private Dolgozo _dolgozo;
 
@@ -56,25 +33,7 @@ namespace Raktar.ViewModels
          
             }
         }
-        public string WorkerName
-        {
-            get
-            {
-                if (Dolgozo != null)
-                    return Dolgozo.Name;
-                else return "";
-            }
-        }
-        public string WorkerGroup
-        {
-            get
-            {
-                if (Dolgozo != null)
-                    return Dolgozo.GroupName;
-                else
-                    return "";
-            }
-        }
+
         public void KivalasztDolgozo()
         {
             var window = new WindowManager();
@@ -85,6 +44,17 @@ namespace Raktar.ViewModels
         /// <summary>
         /// Lett e választva dolgozó ha nem null a dolgozó beállításakor az érték akkor igaz ha null akkor false. És a groupbox lezárodik
         /// </summary>
+
+        private DateTime _kiadDate = DateTime.Now;
+
+        public DateTime KiadDate
+        {
+            get { return _kiadDate; }
+            set { _kiadDate = value;
+                NotifyOfPropertyChange(()=>KiadDate);
+            }
+        }
+
         private bool _valasztott;
 
         public bool Valasztott
@@ -236,6 +206,7 @@ namespace Raktar.ViewModels
         public void AddCikkToGrid()
         {
             var ruha = new Munkaruha() { Cikkszam = Number, Mennyiseg = int.Parse(Count), Id = this.Id, Mertekegyseg = Unit, Cikknev = CikkName, Egysegar = int.Parse(Price), Partner = this.Partner };
+            ruha.KiadDatum = KiadDate.ToShortDateString();
             Ruhak.Add(ruha);
             Number = string.Empty; Count = string.Empty; Unit = string.Empty; CikkName = string.Empty; Price = string.Empty;
             NotifyOfPropertyChange(() => Ruhak);
@@ -280,6 +251,7 @@ namespace Raktar.ViewModels
                 Max = ruha.Mennyiseg - vanilyenruha;
                 Price = ruha.Egysegar.ToString();
                 Partner = ruha.Partner;
+               
             }
             else
             {
@@ -290,6 +262,7 @@ namespace Raktar.ViewModels
                 Max = ruha.Mennyiseg;
                 Price = ruha.Egysegar.ToString();
                 Partner = ruha.Partner;
+              
             }
 
         }

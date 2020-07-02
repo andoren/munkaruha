@@ -16,21 +16,19 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="40"/>
+
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Vertical">
                 <StackPanel>
                     <StackPanel  Margin="5" Orientation="Horizontal">
                         <Button x:Name="KivalasztDolgozo" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15"  Width="160" Height="45">Dolgozó kiválasztása</Button>
-                        <TextBlock VerticalAlignment="Center" FontSize="18" Margin="10,0,10,0">Név:</TextBlock>
-                        <TextBlock VerticalAlignment="Center" FontSize="18" FontWeight="Bold" MinWidth="100" x:Name="WorkerName" Margin="0,0,10,0"></TextBlock>
-                        <TextBlock VerticalAlignment="Center" FontSize="18" Margin="0,0,10,0">Osztály:</TextBlock>
-                        <TextBlock VerticalAlignment="Center" FontSize="18" FontWeight="Bold" MinWidth="100" x:Name="WorkerGroup" Margin="0,0,10,0"></TextBlock>
+                        <TextBlock VerticalAlignment="Center" FontSize="18" Margin="10,0,10,0">Kiválasztva:</TextBlock>
+                        <TextBlock VerticalAlignment="Center" FontSize="18" FontWeight="Bold" MinWidth="100" x:Name="Dolgozo_WorkerNameWithGroup" Margin="0,0,10,0"></TextBlock>
                     </StackPanel>
-                    <GroupBox  IsEnabled="{Binding Valasztott}" >
+                    <GroupBox  Margin="5" IsEnabled="{Binding Valasztott}" >
 
-                        <StackPanel  VerticalAlignment="Center"  Margin="5,0,5,0" >
-                            <Button  x:Name="AddCikk" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="130" Height="40">Cikk kiválasztása</Button>
+                        <StackPanel  VerticalAlignment="Center"  Margin="0,5,5,0" >
+                            <Button  x:Name="AddCikk" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="130" Height="40">Cikk kiválasztása</Button>
                             <Grid Margin="0,0,0,5"  VerticalAlignment="Center" >
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="auto" />
@@ -52,13 +50,13 @@
 
                                 <TextBox Style="{StaticResource DesignedTextBox}" IsReadOnly="True" Grid.Column="3"  ToolTip="{Binding CikkName }" FontWeight="Bold" x:Name="CikkName"  Margin="5,0,5,0" VerticalAlignment="Center"></TextBox>
 
-                                <TextBlock Grid.Column="4"  Margin="5,0,5,0" VerticalAlignment="Center">Mennyiség</TextBlock>
+                                <TextBlock Grid.Column="4"  Margin="5,0,5,0" VerticalAlignment="Center">Mennyiség:</TextBlock>
 
                                 <TextBox Style="{StaticResource DesignedTextBox}" Grid.Column="5"  x:Name="Count"  Margin="5,0,5,0" HorizontalContentAlignment="Center" VerticalAlignment="Center">
                                     0</TextBox>
                                 <TextBlock Grid.Column="6"  Margin="5,0,5,0">Raktáron:</TextBlock>
                                 <TextBox Style="{StaticResource DesignedTextBox}" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" Grid.Column="7"  FontWeight="Bold" Margin="5,0,5,0" x:Name="Max"  VerticalAlignment="Center"></TextBox>
-                                <TextBlock Grid.Column="8"   Width="80" Margin="5,0,5,0" VerticalAlignment="Center">
+                                <TextBlock Grid.Column="8"   Width="90" Margin="5,0,5,0" VerticalAlignment="Center">
                     Mértékegység:</TextBlock>
 
                                 <TextBox Style="{StaticResource DesignedTextBox}" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" Grid.Column="9"  FontWeight="Bold" x:Name="Unit"  Margin="5,0,5,0" VerticalAlignment="Center">
@@ -73,10 +71,10 @@
                                     <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="1.5*"/>
                                     <ColumnDefinition Width="3*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock  Width="50" Margin="5,0,5,0" VerticalAlignment="Center"> Egységár:
+                                <TextBlock  Width="60" Margin="5,0,5,0" VerticalAlignment="Center"> Egységár:
                                 </TextBlock>
 
                                 <TextBox Style="{StaticResource DesignedTextBox}" Grid.Column="1" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" FontWeight="Bold" x:Name="Price"  Margin="5,0,5,0" VerticalAlignment="Center" >
@@ -85,7 +83,9 @@
                                 <TextBlock Grid.Column="2" Margin="5,0,5,0" VerticalAlignment="Center">Partner:</TextBlock>
                                 <TextBox Style="{StaticResource DesignedTextBox}" Grid.Column="3" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" FontWeight="Bold" x:Name="Partner" VerticalAlignment="Center" Margin="5,0,5,0"  >
                                 </TextBox>
-                                <Button Grid.Column="4" x:Name="AddCikkToGrid" Margin="5" Height="40" >Cikk hozzáadása</Button>
+                                <TextBlock  Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="4">Kiadás dátuma:</TextBlock>
+                                <DatePicker x:Name="KiadDate" Grid.Column="5"  VerticalAlignment="Center"></DatePicker>
+                                <Button Grid.Column="6" x:Name="AddCikkToGrid" Margin="5" Height="40" >Cikk hozzáadása</Button>
                             </Grid>
                         </StackPanel>
 
@@ -106,18 +106,22 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </ScrollViewer>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Button  Margin="5 0 0 5" Background="Green" Foreground="White" BorderBrush="LightGreen" BorderThickness=".5"  HorizontalAlignment="Left"   x:Name="Save" >
+                    Mentés
+                </Button>
+                <Button  Margin="5 0 0 5"    HorizontalAlignment="Left"   x:Name="Exit" >
+                    Kilépés
+                </Button>
+            </StackPanel>
+        
             <StackPanel Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
                 <TextBlock> Összsen:</TextBlock>
                 <TextBlock x:Name="Sum" FontWeight="Bold" Text="{Binding Sum, StringFormat='c0', ConverterCulture=hu-HU}" Margin="10,0,20,0">0 Ft</TextBlock>
             </StackPanel>
-            <StackPanel Margin="5" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button x:Name="Save" Width="100" Height="45" Margin="0,0,60,0">
-                    Mentés
-                </Button>
-                <Button x:Name="CloseWindow" Width="100" Height="45">
-                    Kilépés
-                </Button>
-            </StackPanel>
+
+
+
 
         </Grid>
     </Border>
