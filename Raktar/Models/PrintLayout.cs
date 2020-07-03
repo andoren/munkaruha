@@ -9,7 +9,7 @@ namespace Raktar.Models
 {
     public class PrintLayout
     {
-        public static readonly PrintLayout A4 = new PrintLayout("29.7cm", "42cm", "3.18cm", "2.54cm");
+        public static readonly PrintLayout A4 = new PrintLayout("21cm", "29.7cm", "1.00cm", "1.27cm");
         public static readonly PrintLayout A4Narrow = new PrintLayout("29.7cm", "42cm", "1.27cm", "1.27cm");
         public static readonly PrintLayout A4Moderate = new PrintLayout("29.7cm", "42cm", "1.91cm", "2.54cm");
 

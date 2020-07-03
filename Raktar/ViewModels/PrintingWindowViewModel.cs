@@ -77,6 +77,7 @@ namespace Raktar.ViewModels
             Document.PageHeight = PrintLayout.A4.Size.Height;
             Document.PagePadding = PrintLayout.A4.Margin;
             Document.ColumnWidth = PrintLayout.A4.ColumnWidth;
+            
             PrintHelper.PrintXPS(Document);
             TryClose(true);
         }

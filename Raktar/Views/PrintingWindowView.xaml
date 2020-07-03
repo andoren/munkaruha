@@ -5,54 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Raktar.Views"
         mc:Ignorable="d"
+        
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cal="http://www.caliburnproject.org"
-        Title="Nyomtatás" Height="821" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Nyomtatás" Height="800" Width="21cm" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"  />
             <RowDefinition Height="auto"  />
         </Grid.RowDefinitions>
         <FlowDocumentScrollViewer >
-            <FlowDocument  x:Name="Document" FontFamily="Arial" FontSize="20">
+            <FlowDocument  PageHeight="29.7cm" PageWidth="21cm"  x:Name="Document" >
                 <BlockUIContainer>
                     <Image Source="/Raktar;component/Pictrures/fejlecvajda.jpg"></Image>
                 </BlockUIContainer>
-                <BlockUIContainer Margin="0,30,0,0" TextAlignment="Center" FontSize="40">
-                    <StackPanel HorizontalAlignment="Center">
-                        <TextBlock HorizontalAlignment="Center">Leltár</TextBlock>
-                        <TextBlock HorizontalAlignment="Center" Text="{Binding Dolgozo.Name}"></TextBlock>
+                <BlockUIContainer Margin="0,30,0,0" TextAlignment="Center" >
+                    <StackPanel  HorizontalAlignment="Center">
+                        <TextBlock FontSize="36" HorizontalAlignment="Center">Leltár</TextBlock>
+                        <TextBlock FontSize="36" HorizontalAlignment="Center" Text="{Binding Dolgozo.Name}"></TextBlock>
                     </StackPanel>
                 </BlockUIContainer>
-                <Paragraph TextAlignment="Center"   FontSize="20" >
-                    <DataGrid Width="860" ItemsSource="{Binding Ruhak}" IsReadOnly="True"  AutoGenerateColumns="False"  AlternationCount="1" HeadersVisibility="Column"   >
+                <Paragraph TextAlignment="Center"    >
+                    <DataGrid Width="700" ItemsSource="{Binding Ruhak}" IsReadOnly="True"  AutoGenerateColumns="False"  AlternationCount="1" HeadersVisibility="Column"   >
                         <DataGrid.Columns>
-                            <DataGridTextColumn FontSize="16" FontFamily="Arial" Binding="{Binding Cikkszam}" Width="*" Header="Cikkszám" ></DataGridTextColumn>
-                            <DataGridTextColumn FontSize="16" FontFamily="Arial" Binding="{Binding Cikknev}" Width="2.5*" Header="Cikknév"></DataGridTextColumn>
-                            <DataGridTextColumn FontSize="16" FontFamily="Arial" Binding="{Binding Mennyiseg}" Width="0.5*" Header="Me."></DataGridTextColumn>
-                            <DataGridTextColumn FontSize="16" FontFamily="Arial" Binding="{Binding Mertekegyseg}" Width="0.7*" Header="Me.egység"></DataGridTextColumn>
-                            <DataGridTextColumn FontSize="16" FontFamily="Arial" Binding="{Binding Egysegar, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Egységár"></DataGridTextColumn>
-                            <DataGridTextColumn FontSize="16" FontFamily="Arial" Binding="{Binding Osszesen, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Összesen"></DataGridTextColumn>
-                            <DataGridTextColumn FontSize="16" FontFamily="Arial" Binding="{Binding Bevdatum}" Width="*" Header="Kiadás"></DataGridTextColumn>
+                            <DataGridTextColumn   Binding="{Binding Cikkszam}" Width="*" Header="Cikkszám" ></DataGridTextColumn>
+                            <DataGridTextColumn   Binding="{Binding Cikknev}" Width="2.5*" Header="Cikknév"></DataGridTextColumn>
+                            <DataGridTextColumn   Binding="{Binding Mennyiseg}" Width="0.5*" Header="Me."></DataGridTextColumn>
+                            <DataGridTextColumn   Binding="{Binding Mertekegyseg}" Width="0.7*" Header="Egység"></DataGridTextColumn>
+                            <DataGridTextColumn   Binding="{Binding Egysegar, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Egységár"></DataGridTextColumn>
+                            <DataGridTextColumn   Binding="{Binding Osszesen, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Összesen"></DataGridTextColumn>
+                            <DataGridTextColumn   Binding="{Binding Bevdatum}" Width="*" Header="Kiadás"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                     
                 </Paragraph>
-                <Paragraph FontSize="25"  TextAlignment="Right">
+                <Paragraph  TextAlignment="Right">
                     <StackPanel   VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
-                        <TextBlock> Összsen:</TextBlock>
-                        <TextBlock FontWeight="Bold" Text="{Binding Sum, StringFormat='c0', ConverterCulture=hu-HU}" Margin="10,0,20,0"></TextBlock>
+                        <TextBlock FontSize="20"> Összsen:</TextBlock>
+                        <TextBlock  FontSize="20" FontWeight="Bold" Text="{Binding Sum, StringFormat='c0', ConverterCulture=hu-HU}" Margin="10,0,20,0"></TextBlock>
                     </StackPanel>
                 </Paragraph>
-                <Paragraph FontSize="25"  >
+                <Paragraph   >
                     <StackPanel>
-                        <TextBlock Text="Készült: " ></TextBlock>
-                        <TextBlock Text="{Binding Keszult}"></TextBlock>
+                        <TextBlock FontSize="20" Text="Készült: " ></TextBlock>
+                        <TextBlock FontSize="20" Text="{Binding Keszult}"></TextBlock>
                     </StackPanel>
                 </Paragraph>
-                <Paragraph TextAlignment="Right" FontSize="20">
-                    <StackPanel Margin="0" Width="300" >
-                        <TextBlock Width="300" HorizontalAlignment="Left">........................................................................</TextBlock>
+                <Paragraph TextAlignment="Right" >
+                    <StackPanel Margin="0"  >
+                        <TextBlock HorizontalAlignment="Left">........................................................................</TextBlock>
                         <TextBlock  HorizontalAlignment="Center">Dolgozó aláírása</TextBlock>
                     </StackPanel>
                 </Paragraph>

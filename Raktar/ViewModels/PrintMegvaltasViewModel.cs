@@ -59,7 +59,7 @@ namespace Raktar.ViewModels
             decimal osszeg = 0;
             foreach (var ruha in Ruhak)
             {
-                if (ruha.Cikkcsoport.ToLower() == "eszköz" || ruha.Cikkcsoport.ToLower() == "védőruha") {
+                if (ruha.Cikkcsoport.ToLower() == "eszközök" || ruha.Cikkcsoport.ToLower() == "védőruha") {
                     osszeg += ruha.Osszesen;
                 }
                 else if (ruha.Cikkcsoport.ToLower() == "munkaruha") {
@@ -90,7 +90,6 @@ namespace Raktar.ViewModels
         }
         public void Print(FlowDocument Document)
         {
-
             Document.PageWidth = PrintLayout.A4.Size.Width;
             Document.PageHeight = PrintLayout.A4.Size.Height;
             Document.PagePadding = PrintLayout.A4.Margin;

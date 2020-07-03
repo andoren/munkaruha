@@ -18,11 +18,6 @@
                 <GroupBox FontSize="16" Header="Dolgozói listák" >
                     <WrapPanel>
                         <Button x:Name="DolgozoOsztalyLista">Dolgozók oszályonként</Button>
-                        <Button>Dolgozók oszályonként</Button>
-                        <Button>Dolgozók oszályonként</Button>
-                        <Button>Dolgozók oszályonként</Button>
-                        <Button>Dolgozók oszályonként</Button>
-                        <Button>Dolgozók oszályonként</Button>
                     </WrapPanel>
                 </GroupBox>
             </StackPanel>

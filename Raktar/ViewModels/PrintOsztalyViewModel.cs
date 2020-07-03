@@ -22,9 +22,6 @@ namespace Raktar.ViewModels
         {
             OsztalyName = osztaly;
             Persons = getDataByOsztaly(osztaly);
-            Document.FontFamily = new FontFamily("Arial");
-            Document.FontSize = 20;
-
             Thread thread = new Thread(CreateFlowDocument);
             thread.IsBackground = true;
             thread.Start();
@@ -168,32 +165,32 @@ namespace Raktar.ViewModels
                     stackPanel.Children.Add(Title);
 
                     BlockUIContainer TitleAndNameContainer = new BlockUIContainer(stackPanel);
-                    TitleAndNameContainer.FontSize = 40;
+                    TitleAndNameContainer.FontSize = 36;
                     TitleAndNameContainer.TextAlignment = TextAlignment.Center;
                     TitleAndNameContainer.Margin = new Thickness(0, 40, 0, 40);
              
                 //Ruhak 
                     BlockUIContainer ruhakContainer = new BlockUIContainer();
-                    ruhakContainer.FontSize = 20;
+                 
                     ruhakContainer.TextAlignment = TextAlignment.Center;
                     ruhakContainer.Margin = new Thickness(0, 40, 0, 40);
                     DataGrid dataGrid = new DataGrid();
                     dataGrid.ItemsSource = ruhak;
-                    dataGrid.Width = 860; dataGrid.AutoGenerateColumns = false; dataGrid.AlternationCount = 1; dataGrid.HeadersVisibility = DataGridHeadersVisibility.Column; dataGrid.IsReadOnly = true;
-                    dataGrid.Columns.Add(new DataGridTextColumn() { FontSize = 16, FontFamily = new FontFamily("Arial"), Binding = new Binding("Cikkszam"), Width = new DataGridLength(1, DataGridLengthUnitType.Star), Header = "Cikkszám" });
-                    dataGrid.Columns.Add(new DataGridTextColumn() { FontSize = 16, FontFamily = new FontFamily("Arial"), Binding = new Binding("Cikknev"), Width = new DataGridLength(2.5, DataGridLengthUnitType.Star), Header = "Cikknév" });
-                    dataGrid.Columns.Add(new DataGridTextColumn() { FontSize = 16, FontFamily = new FontFamily("Arial"), Binding = new Binding("Mennyiseg"), Width = new DataGridLength(0.5, DataGridLengthUnitType.Star), Header = "Me." });
-                    dataGrid.Columns.Add(new DataGridTextColumn() { FontSize = 16, FontFamily = new FontFamily("Arial"), Binding = new Binding("Mertekegyseg"), Width = new DataGridLength(0.7, DataGridLengthUnitType.Star), Header = "Me. egység" });
-                    dataGrid.Columns.Add(new DataGridTextColumn() { FontSize = 16, FontFamily = new FontFamily("Arial"), Binding = new Binding("FormatedEgysegar"), Width = new DataGridLength(1, DataGridLengthUnitType.Star), Header = "Egységár" });
-                    dataGrid.Columns.Add(new DataGridTextColumn() { FontSize = 16, FontFamily = new FontFamily("Arial"), Binding = new Binding("FormatedOsszesen"), Width = new DataGridLength(1, DataGridLengthUnitType.Star), Header = "Összesen" });
-                    dataGrid.Columns.Add(new DataGridTextColumn() { FontSize = 16, FontFamily = new FontFamily("Arial"), Binding = new Binding("Bevdatum"), Width = new DataGridLength(1, DataGridLengthUnitType.Star), Header = "Kiadás" });
+                    dataGrid.Width = 700; dataGrid.AutoGenerateColumns = false; dataGrid.AlternationCount = 1; dataGrid.HeadersVisibility = DataGridHeadersVisibility.Column; dataGrid.IsReadOnly = true;
+                    dataGrid.Columns.Add(new DataGridTextColumn() {  Binding = new Binding("Cikkszam"), Width = new DataGridLength(1, DataGridLengthUnitType.Star), Header = "Cikkszám" });
+                    dataGrid.Columns.Add(new DataGridTextColumn() {  Binding = new Binding("Cikknev"), Width = new DataGridLength(2.5, DataGridLengthUnitType.Star), Header = "Cikknév" });
+                    dataGrid.Columns.Add(new DataGridTextColumn() {  Binding = new Binding("Mennyiseg"), Width = new DataGridLength(0.5, DataGridLengthUnitType.Star), Header = "Me." });
+                    dataGrid.Columns.Add(new DataGridTextColumn() {  Binding = new Binding("Mertekegyseg"), Width = new DataGridLength(0.7, DataGridLengthUnitType.Star), Header = "Egység" });
+                    dataGrid.Columns.Add(new DataGridTextColumn() {  Binding = new Binding("FormatedEgysegar"), Width = new DataGridLength(1, DataGridLengthUnitType.Star), Header = "Egységár" });
+                    dataGrid.Columns.Add(new DataGridTextColumn() {  Binding = new Binding("FormatedOsszesen"), Width = new DataGridLength(1, DataGridLengthUnitType.Star), Header = "Összesen" });
+                    dataGrid.Columns.Add(new DataGridTextColumn() {  Binding = new Binding("Bevdatum"), Width = new DataGridLength(1.3, DataGridLengthUnitType.Star), Header = "Kiadás" });
                     ruhakContainer.Child = dataGrid;
 
 
                     //Mindösszesen
                     BlockUIContainer MindosszesenContainer = new BlockUIContainer();
                     MindosszesenContainer.TextAlignment = TextAlignment.Right;
-                    MindosszesenContainer.FontSize = 25;
+                    MindosszesenContainer.FontSize = 20;
 
                     StackPanel stackPanel1 = new StackPanel();
                     stackPanel1.HorizontalAlignment = HorizontalAlignment.Right;
@@ -213,7 +210,7 @@ namespace Raktar.ViewModels
                     MindosszesenContainer.Child = stackPanel1;
                     //Készült:
                     BlockUIContainer keszultContainer = new BlockUIContainer();
-                    keszultContainer.FontSize = 25;
+                    keszultContainer.FontSize = 20;
                     StackPanel stackPanel2 = new StackPanel();
 
                     TextBlock keszultSzoveg = new TextBlock();

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Raktar.Views"
         mc:Ignorable="d" FontSize="26"
         Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown"    
-        Title="Leltárív" Height="665" Width="925" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None">
+        Title="Leltárív" Height="665" Width="21cm" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None">
     <Border Background="White" Padding="0"  BorderBrush="#2868b0" BorderThickness="4" CornerRadius="4">
         <Grid>
             <Grid.RowDefinitions>
