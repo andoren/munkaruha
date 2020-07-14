@@ -23,7 +23,7 @@ namespace Raktar.Models.Database.Abstract
             string password = ConfigurationManager.AppSettings["DATABASEPASSWORD"];
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "CharSet = utf8;" + "UID=" + uid + ";" + "PASSWORD=" + password + "; Connect Timeout=5";
+            database + ";" + "CharSet = utf8;" + "UID=" + uid + ";" + "PASSWORD=" + password + "; SslMode=none;Connect Timeout=5";
 
             return new MySqlConnection(connectionString);
         }

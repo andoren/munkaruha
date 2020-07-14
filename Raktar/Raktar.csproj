@@ -147,6 +147,7 @@
     <Compile Include="Models\PrintLayout.cs" />
     <Compile Include="Models\SceneFactory.cs" />
     <Compile Include="RaktarBootstrapper.cs" />
+    <Compile Include="SumValueConverterFromGrid.cs" />
     <Compile Include="ViewModels\AddAndModifyCikkViewModel.cs" />
     <Compile Include="ViewModels\AddAndModifyCsoportViewModel.cs" />
     <Compile Include="ViewModels\AddAndModifyDolgozoViewModel.cs" />

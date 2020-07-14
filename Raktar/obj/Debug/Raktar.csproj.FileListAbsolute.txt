@@ -78,7 +78,6 @@ E:\Repos\Munkaruha\Raktar\bin\Debug\Raktar.exe.manifest
 E:\Repos\Munkaruha\Raktar\bin\Debug\Raktar.application
 E:\Repos\Munkaruha\Raktar\bin\Debug\Raktar.exe
 E:\Repos\Munkaruha\Raktar\bin\Debug\Raktar.pdb
-E:\Repos\Munkaruha\Raktar\bin\Debug\BouncyCastle.Crypto.dll
 E:\Repos\Munkaruha\Raktar\bin\Debug\Caliburn.Micro.dll
 E:\Repos\Munkaruha\Raktar\bin\Debug\Caliburn.Micro.Platform.Core.dll
 E:\Repos\Munkaruha\Raktar\bin\Debug\Caliburn.Micro.Platform.dll
@@ -163,5 +162,3 @@ E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.application
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csproj.CopyComplete
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.exe
 E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.pdb
-E:\Repos\Munkaruha\Raktar\obj\Debug\Raktar.csprojAssemblyReference.cache
-E:\Repos\Munkaruha\Raktar\bin\Debug\BouncyCastle.Crypto.xml

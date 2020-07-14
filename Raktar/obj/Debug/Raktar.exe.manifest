@@ -43,18 +43,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BouncyCastle.Crypto.dll" size="2787928">
-      <assemblyIdentity name="BouncyCastle.Crypto" version="1.8.5.0" publicKeyToken="0E99375E54769942" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bpSOyVrRywfbkoU3lP6owCL81jLoHU9LM+tnCKXmrDE=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Caliburn.Micro.dll" size="61952">
       <assemblyIdentity name="Caliburn.Micro" version="3.2.0.0" publicKeyToken="8E5891231F2ED21F" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -115,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Raktar.exe" size="692176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Raktar.exe" size="693712">
       <assemblyIdentity name="Raktar" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UgEcggiqiwy0hNWMUhQY6DLXxsJBsnJ2sb9yubfFJr8=</dsig:DigestValue>
+        <dsig:DigestValue>LXnt/19FDAfsYAUNsbEwy9cu2YpgrynH5MhhJL27OkU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

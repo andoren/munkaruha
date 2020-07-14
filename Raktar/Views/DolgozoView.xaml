@@ -30,19 +30,50 @@
         </StackPanel>
 
 
-            <DataGrid Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" x:Name="Ruhak"  FontSize="16" IsReadOnly="True" Cursor="Hand" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single" >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Cikkszam}" Width="*" Header="Cikkszám" ></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Cikknev}" Width="*" Header="Cikknév"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Cikkcsoport}" Width="*" Header="Cikkcsoport"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Mennyiseg}" Width="*" Header="Mennyiség"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Mertekegyseg}" Width="*" Header="Mértékegység"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Egysegar, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Egységár"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Osszesen, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Összesen"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Partner}" Width="*" Header="Partner"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Bevdatum}" Width="*" Header="Kiadás"></DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+        <DataGrid  Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" x:Name="cvTasks"  FontSize="16" IsReadOnly="True" Cursor="Hand" Foreground="Black" AutoGenerateColumns="False"  AlternationCount="1" SelectionMode="Single" >
+            <DataGrid.Resources>
+                <local:SumValueConverterFromGrid x:Key="SumValues" />
+            </DataGrid.Resources>
+            <DataGrid.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.Panel>
+                        <ItemsPanelTemplate>
+                            <DataGridRowsPresenter/>
+                        </ItemsPanelTemplate>
+                    </GroupStyle.Panel>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                                        <Expander IsExpanded="True">
+                                            <Expander.Header>
+                                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Stretch">
+                                                    <TextBlock Margin="5" Text="{Binding Name}" />
+                                                    <TextBlock Margin="5"   Text="{Binding StringFormat=Összesen: {0:C0}, ConverterCulture= hu-HU , Converter={StaticResource SumValues}, ConverterParameter=cvTasks}" FontWeight="Bold"  />
+                                                </StackPanel>
+                                            </Expander.Header>
+                                            <ItemsPresenter />
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </DataGrid.GroupStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Cikkszam}" Width="*" Header="Cikkszám" ></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Cikknev}" Width="*" Header="Cikknév"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Cikkcsoport}" Width="*" Header="Cikkcsoport"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Mennyiseg}" Width="*" Header="Mennyiség"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Mertekegyseg}" Width="*" Header="Mértékegység"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Egysegar, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Egységár"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Osszesen, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Width="*" Header="Összesen"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Partner}" Width="*" Header="Partner"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Bevdatum}" Width="*" Header="Kiadás"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
 
         <StackPanel Margin="0 5" Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >

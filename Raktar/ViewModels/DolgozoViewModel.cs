@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Printing;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Threading;
 using System.Windows.Xps;
@@ -24,7 +26,9 @@ namespace Raktar.ViewModels
         public DolgozoViewModel()
         {
             Ruhak = new BindableCollection<Munkaruha>();
-
+            cvTasks = CollectionViewSource.GetDefaultView(Ruhak);
+            
+            NotifyOfPropertyChange(() => cvTasks);
         }
         #region IValasztInteface
         private Dolgozo _dolgozo;
@@ -104,8 +108,22 @@ namespace Raktar.ViewModels
             Ruhak = new BindableCollection<Munkaruha>();
             DolgozoDatabaseHelper helper = new DolgozoDatabaseHelper();
             Ruhak = helper.GetRuhakByDolgozoId(Dolgozo.Id);
+            cvTasks = CollectionViewSource.GetDefaultView(Ruhak);
+            cvTasks = CollectionViewSource.GetDefaultView(Ruhak);
+            cvTasks.GroupDescriptions.Add(new PropertyGroupDescription("Cikkcsoport"));
+            NotifyOfPropertyChange(() => cvTasks);
         }
-        
+        private ICollectionView _cvTasks;
+
+        public ICollectionView cvTasks
+        {
+            get { return _cvTasks; }
+            set { _cvTasks = value;
+                NotifyOfPropertyChange(()=>cvTasks);
+            }
+        }
+
+     
         public void Visszavet() {
             if (Dolgozo != null) {
                 var visszavetwindow = new VisszavetViewModel(Dolgozo,Ruhak);

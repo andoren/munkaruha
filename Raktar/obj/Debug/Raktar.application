@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Raktar.exe.manifest" size="10679">
+    <dependentAssembly dependencyType="install" codebase="Raktar.exe.manifest" size="9987">
       <assemblyIdentity name="Raktar.exe" version="1.0.0.7" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZQ5/YBDJk0nrCnKP39EqP8mJAJOEO8HE7gcMHDsGZ08=</dsig:DigestValue>
+        <dsig:DigestValue>MGh3scMYjV1uZq8cSft4x4pM0SndwwvZoxps20qISPo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
